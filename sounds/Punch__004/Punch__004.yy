@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"Punch__004",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.24526078,
+  "name":"Punch__004",
+  "parent":{
+    "name":"audio",
+    "path":"folders/Sounds/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Punch__004.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_Hand_Off_To_RB",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_Hand_Off_To_RB",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

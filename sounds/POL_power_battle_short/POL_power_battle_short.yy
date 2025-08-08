@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"POL_power_battle_short",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":11.296508,
+  "name":"POL_power_battle_short",
+  "parent":{
+    "name":"audio",
+    "path":"folders/Sounds/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"POL_power_battle_short.ogg",
+  "type":0,
+  "volume":1.0,
+}

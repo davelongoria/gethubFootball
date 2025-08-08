@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"Path6",
+  "closed":false,
+  "kind":1,
+  "name":"Path6",
+  "parent":{
+    "name":"BACKS",
+    "path":"folders/Objects/offensive Players/BACKS.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":761.2063,"y":650.4546,},
+    {"speed":100.0,"x":784.3468,"y":678.5537,},
+    {"speed":100.0,"x":813.27234,"y":685.99176,},
+    {"speed":100.0,"x":859.55334,"y":676.9009,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_palette_surface_refresh_away",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_palette_surface_refresh_away",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

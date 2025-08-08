@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"POL_star_commando_short",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":13.2469845,
+  "name":"POL_star_commando_short",
+  "parent":{
+    "name":"audio",
+    "path":"folders/Sounds/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"POL_star_commando_short.ogg",
+  "type":0,
+  "volume":1.0,
+}
