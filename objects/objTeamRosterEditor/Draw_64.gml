@@ -1,6 +1,6 @@
-/// @desc objTeamRosterEditor — Draw GUI (safe + font-correct)
+/// @desc objTeamRosterEditor — Draw GUI (safe + font‑correct)
 
-/// 0) HARD RESET OF RENDER STATE
+// ---------- 0) reset render state ----------
 shader_reset();
 gpu_set_blendmode(bm_normal);
 draw_set_alpha(1);
@@ -8,35 +8,35 @@ draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-/// 1) BIND A REAL FONT (resource first, then runtime fallback)
+// ---------- 1) bind a real font ----------
 if (font_exists(fntRosterLarge)) {
     draw_set_font(fntRosterLarge);
 } else if (variable_global_exists("__ui_font") && is_real(global.__ui_font) && global.__ui_font != -1) {
+    // optional runtime fallback you create at boot with font_add(...)
     draw_set_font(global.__ui_font);
 } else if (variable_global_exists("font") && is_real(global.font)) {
-    // last-ditch fallback if you created a sprite font in GLOBALS
+    // last‑ditch fallback if you built a sprite font in GLOBALS
     draw_set_font(global.font);
 } else {
-    draw_set_font(-1); // engine default (still valid)
+    draw_set_font(-1); // engine default
 }
 
-/// 2) PROBE — if you don't see this, the font didn't bind
-draw_text(20, 16, "TEXT PROBE: roster editor is drawing");
+// // (optional) quick probe for debugging:
+// // draw_text(20, 16, "ROSTER EDITOR DRAW");
 
+// ---------- 2) soft-dim background (no external dimmer needed) ----------
 var GW = display_get_gui_width();
 var GH = display_get_gui_height();
-
-/// 3) SOFT-DIM BACKGROUND (handled by editor, not a separate object)
 draw_set_alpha(0.35);
 draw_set_color(c_black);
 draw_rectangle(0, 0, GW, GH, false);
 draw_set_alpha(1);
 
-/// 4) TITLE
+// ---------- 3) title ----------
 draw_set_color(c_white);
 draw_text(24, 40, "TEAM + ROSTER EDITOR");
 
-/// 5) HEADER (TEAM/CITY/ABBR) — guarded
+// ---------- 4) header (team/city/abbr) — guard grid_data ----------
 if (!(is_array(grid_data) && array_length(grid_data) > 0 && is_struct(grid_data[0]) && is_array(grid_data[0].fields))) {
     draw_set_color(c_yellow);
     draw_text(24, 80, "⚠ grid_data header missing");
@@ -53,10 +53,10 @@ draw_text(180,  92, string(hdr[0]));
 draw_text(180, 116, string(hdr[1]));
 draw_text(180, 140, string(hdr[2]));
 
-// highlight currently selected header cell
+// highlight current header cell
 if (selected_row == 0) {
     var hx = 176 + selected_col * 160;
-    var hy = 92  + selected_col * 24; // 0→92, 1→116, 2→140
+    var hy =  92 + selected_col * 24; // 0→92, 1→116, 2→140
     draw_set_color(c_yellow);
     draw_rectangle(hx - 6, hy - 2, hx + 300, hy + 18, true);
     draw_set_color(c_black);
@@ -64,14 +64,14 @@ if (selected_row == 0) {
     draw_set_color(c_white);
 }
 
-/// 6) COLUMN LABELS
+// ---------- 5) column labels ----------
 var labels_x = 24;
-var labels_y = top_margin - 24;
+var labels_y = top_margin - 24; // from Create
 for (var c = 0; c < array_length(col_labels); c++) {
     draw_text(labels_x + c * 150, labels_y, col_labels[c]);
 }
 
-/// 7) PLAYER ROWS — guarded
+// ---------- 6) player rows ----------
 var start_i      = 1 + scroll_offset; // skip header
 var visible_rows = floor((GH - top_margin) / row_height);
 var end_i        = min(array_length(grid_data) - 1, start_i + visible_rows - 1);
@@ -81,7 +81,7 @@ for (var i = start_i; i <= end_i; i++) {
     var row = grid_data[i];
     if (!is_struct(row) || row.type != "player") { row_y += row_height; continue; }
 
-    // selection highlight line
+    // selection highlight band
     if (i == selected_row) {
         draw_set_color(make_color_rgb(48,48,72));
         draw_rectangle(20, row_y - 4, GW - 20, row_y + row_height - 4, false);
@@ -109,9 +109,12 @@ for (var i = start_i; i <= end_i; i++) {
     row_y += row_height;
 }
 
-/// 8) FOOTER HINT
+// ---------- 7) footer hint ----------
 draw_set_halign(fa_center);
 draw_set_color(c_white);
 draw_text(GW * 0.5, GH - 28, keyboard_open
     ? "Type on the virtual keyboard. OK=Enter/Start, Cancel=Esc/B."
     : "↑/↓ rows, ←/→ cols, A/Enter edit, B/Esc exit");
+
+// restore default align for safety
+draw_set_halign(fa_left);
