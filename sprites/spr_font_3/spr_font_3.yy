@@ -75,7 +75,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_font",
+    "%Name":"spr_font_3",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -99,7 +99,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_font",
+    "name":"spr_font_3",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,

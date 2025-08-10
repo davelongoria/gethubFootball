@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_draw_player_portrait",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_draw_player_portrait",
+  "parent":{
+    "name":"script",
+    "path":"folders/Objects/Palette/roster/script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

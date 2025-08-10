@@ -1,5 +1,4 @@
 /// scr_reset_roster_editor_state
-
 /// This is a SCRIPT to reset all roster editor UI objects and states.
 
 // Destroy UI Objects if they exist

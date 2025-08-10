@@ -1,0 +1,2311 @@
+==========================================================================================
+GMS2 PROJECT DUMP: githubFootbsll
+Generated: 2025-08-10T15:35:03
+Project root: C:\Users\davec\Desktop\githubFootbsll\githubFootbsll\gethubFootball
+Project file: githubFootbsll.yyp
+------------------------------------------------------------------------------------------
+INDEX
+  Objects: 0
+  Scripts: 54
+    - get_team_logo  [scripts\get_team_logo\get_team_logo.gml]
+    - GLOBALS  [scripts\GLOBALS\GLOBALS.gml]
+    - room_transition  [scripts\room_transition\room_transition.gml]
+    - scr_assign_defensive_play  [scripts\scr_assign_defensive_play\scr_assign_defensive_play.gml]
+    - scr_color_to_hex  [scripts\scr_color_to_hex\scr_color_to_hex.gml]
+    - scr_commit_roster_edits  [scripts\scr_commit_roster_edits\scr_commit_roster_edits.gml]
+    - scr_commit_roster_edits_to_template  [scripts\scr_commit_roster_edits_to_template\scr_commit_roster_edits_to_template.gml]
+    - scr_defender_move_towards  [scripts\scr_defender_move_towards\scr_defender_move_towards.gml]
+    - scr_draw_player_portrait  [scripts\scr_draw_player_portrait\scr_draw_player_portrait.gml]
+    - scr_file_size  [scripts\scr_file_size\scr_file_size.gml]
+    - scr_file_write_string  [scripts\scr_file_write_string\scr_file_write_string.gml]
+    - scr_gamepad_was_pressed  [scripts\scr_gamepad_was_pressed\scr_gamepad_was_pressed.gml]
+    - scr_get_ballcarrier  [scripts\scr_get_ballcarrier\scr_get_ballcarrier.gml]
+    - scr_get_keyboard_char  [scripts\scr_get_keyboard_char\scr_get_keyboard_char.gml]
+    - scr_global_init  [scripts\scr_global_init\scr_global_init.gml]
+    - scr_Hand_Off_To_RB  [scripts\scr_Hand_Off_To_RB\scr_Hand_Off_To_RB.gml]
+    - scr_init_custom_content  [scripts\scr_init_custom_content\scr_init_custom_content.gml]
+    - scr_initialize_folders  [scripts\scr_initialize_folders\scr_initialize_folders.gml]
+    - scr_install_builtins_once  [scripts\scr_install_builtins_once\scr_install_builtins_once.gml]
+    - scr_load_custom_logos  [scripts\scr_load_custom_logos\scr_load_custom_logos.gml]
+    - scr_make_random_roster  [scripts\scr_make_random_roster\scr_make_random_roster.gml]
+    - scr_open_roster_editor  [scripts\scr_open_roster_editor\scr_open_roster_editor.gml]
+    - scr_palette_init  [scripts\scr_palette_init\scr_palette_init.gml]
+    - scr_palette_init_away  [scripts\scr_palette_init_away\scr_palette_init_away.gml]
+    - scr_palette_surface_refresh  [scripts\scr_palette_surface_refresh\scr_palette_surface_refresh.gml]
+    - scr_palette_surface_refresh_away  [scripts\scr_palette_surface_refresh_away\scr_palette_surface_refresh_away.gml]
+    - scr_PocketPasser  [scripts\scr_PocketPasser\scr_PocketPasser.gml]
+    - scr_portrait_clone  [scripts\scr_portrait_clone\scr_portrait_clone.gml]
+    - scr_portrait_default  [scripts\scr_portrait_default\scr_portrait_default.gml]
+    - scr_portrait_ensure  [scripts\scr_portrait_ensure\scr_portrait_ensure.gml]
+    - scr_portrait_palettes_init  [scripts\scr_portrait_palettes_init\scr_portrait_palettes_init.gml]
+    - scr_portrait_random  [scripts\scr_portrait_random\scr_portrait_random.gml]
+    - scr_read_string  [scripts\scr_read_string\scr_read_string.gml]
+    - scr_reset_roster_editor_state  [scripts\scr_reset_roster_editor_state\scr_reset_roster_editor_state.gml]
+    - scr_roster_apply_grid_to_models  [scripts\scr_roster_apply_grid_to_models\scr_roster_apply_grid_to_models.gml]
+    - scr_safe_ds_map_keys  [scripts\scr_safe_ds_map_keys\scr_safe_ds_map_keys.gml]
+    - scr_save_team_data  [scripts\scr_save_team_data\scr_save_team_data.gml]
+    - scr_seed_teams  [scripts\scr_seed_teams\scr_seed_teams.gml]
+    - scr_show_roster_editor  [scripts\scr_show_roster_editor\scr_show_roster_editor.gml]
+    - scr_team_boot  [scripts\scr_team_boot\scr_team_boot.gml]
+    - scr_team_create_new  [scripts\scr_team_create_new\scr_team_create_new.gml]
+    - scr_team_load  [scripts\scr_team_load\scr_team_load.gml]
+    - scr_team_load_all  [scripts\scr_team_load_all\scr_team_load_all.gml]
+    - scr_team_save  [scripts\scr_team_save\scr_team_save.gml]
+    - scr_team_unload  [scripts\scr_team_unload\scr_team_unload.gml]
+    - scr_team_unload_all  [scripts\scr_team_unload_all\scr_team_unload_all.gml]
+    - scr_teaminfo_set  [scripts\scr_teaminfo_set\scr_teaminfo_set.gml]
+    - scr_toggle_fullscreen  [scripts\scr_toggle_fullscreen\scr_toggle_fullscreen.gml]
+    - scr_write_string  [scripts\scr_write_string\scr_write_string.gml]
+    - scr_write_text  [scripts\scr_write_text\scr_write_text.gml]
+    - string_load  [scripts\string_load\string_load.gml]
+    - string_save  [scripts\string_save\string_save.gml]
+    - throw_to_target  [scripts\throw_to_target\throw_to_target.gml]
+    - UtilityScripts  [scripts\UtilityScripts\UtilityScripts.gml]
+  Sprites (names only): 0
+==========================================================================================
+
+##########################################################################################
+OBJECTS
+##########################################################################################
+
+##########################################################################################
+SCRIPTS
+##########################################################################################
+
+==========================================================================================
+SCRIPT: get_team_logo
+File: scripts\get_team_logo\get_team_logo.gml
+------------------------------------------------------------------------------------------
+/// get_team_logo(team_name)
+// Returns the sprite index for a team logo (custom > built-in > default)
+
+function get_team_logo(team_name) {
+    var obj = objBuiltInLogos; // Only one instance expected
+    var t = string_lower(team_name);
+
+    // Custom logo
+    if (ds_map_exists(obj.logo_customs, t)) {
+        return ds_map_find_value(obj.logo_customs, t);
+    }
+    // Built-in logo
+    if (ds_map_exists(obj.logo_builtins, t)) {
+        return ds_map_find_value(obj.logo_builtins, t);
+    }
+    // Fallback default
+    return obj.default_logo;
+}
+
+
+==========================================================================================
+SCRIPT: GLOBALS
+File: scripts\GLOBALS\GLOBALS.gml
+------------------------------------------------------------------------------------------
+
+global.play_active = false;
+global.qb_hike = false;
+global.qb_move_x = 0;
+global.qb_move_y = 0;
+global.throw_pressed = -1;
+global.player_has_ball = noone;
+// Initialize touchdown flag
+global.touchdown_scored = false;
+global.celebration_active = false;
+global.celebration_timer = 0;
+//global.touchdown_scored      = false;
+global.shared_celebrate_sent = false;
+/// which side a player belongs to:  "offense" or "defense"
+global.TEAM_OFFENSE = "offense";
+global.TEAM_DEFENSE = "defense";
+
+global.score_home = 0;
+global.score_away = 0;
+
+global.last_scrimmage_x = 964
+global.last_scrimmage_y  = 400
+global.path_assign_mode = false;
+global.path_wr_index = -1;
+global.path_selected = "";
+global.logos_dir = "logos/";
+global.game_paused = false;
+//global.current_edit_team = 0;   // which team we’re editing right now
+global.font = font_add_sprite(spr_font_3,48,true,true)
+global.play_is_run = false;
+
+global.interception = false;
+global.roster_editor_active = false;
+
+
+==========================================================================================
+SCRIPT: room_transition
+File: scripts\room_transition\room_transition.gml
+------------------------------------------------------------------------------------------
+function room_transition(new_room,transition_kind,transition_speed) {
+	
+	// new_room is the room to go to
+	// transition_kind is the type of transition to do (see list of macros below for options)
+	// transition_speed is how many steps the transition should take
+	
+	// You can either use the number or the macro name to get each type of transition.
+	#macro tr_none 0
+	#macro tr_fade 1
+	#macro tr_flash 2
+	#macro tr_rectangle_left 3
+	#macro tr_rectangle_right 4
+	#macro tr_rectangle_up 5
+	#macro tr_rectangle_down 6
+	#macro tr_horizontal_bars 7
+	#macro tr_vertical_bars 8
+	#macro tr_static 9
+	#macro tr_diagonal_left 10
+	#macro tr_diagonal_right 11
+	#macro tr_spotlight 12
+	#macro tr_center_rectangle 13
+	#macro tr_cross_fade 14
+	#macro tr_push_left 15
+	#macro tr_push_right 16
+	#macro tr_push_up 17
+	#macro tr_push_down 18
+	#macro tr_slide_left 19
+	#macro tr_slide_right 20
+	#macro tr_slide_up 21
+	#macro tr_slide_down 22
+	#macro tr_squish_left 23
+	#macro tr_squish_right 24
+	#macro tr_squish_up 25
+	#macro tr_squish_down 26
+	#macro tr_portal 27
+	#macro tr_grow 28
+	#macro tr_doors_vertical 29
+	#macro tr_doors_horizontal 30
+	#macro tr_splatter 31
+	#macro tr_pixelate 32
+	#macro tr_shrink 33
+	#macro tr_spin 34
+	#macro tr_melt 35
+	#macro tr_lerp_left 36
+	#macro tr_lerp_right 37
+	#macro tr_lerp_up 38
+	#macro tr_lerp_down 39
+	
+	// Create an instance of the room transition object and pass it the relevant values.
+	var _rtobj = instance_create_depth(0,0,0,obj_room_transition);
+	_rtobj.rmtr_room = new_room;
+	_rtobj.rmtr_transition = transition_kind;
+	_rtobj.rmtr_speed = transition_speed;
+	
+}
+
+
+==========================================================================================
+SCRIPT: scr_assign_defensive_play
+File: scripts\scr_assign_defensive_play\scr_assign_defensive_play.gml
+------------------------------------------------------------------------------------------
+function scr_assign_defensive_play(play_id) {
+
+    switch (play_id) {
+
+        case "cover_2":
+            with (obj_cornerback) {
+                role = "zone";
+                zone_x = objFootball.x;
+                zone_y = objFootball.y - 200; // Deep zones
+                zone_radius = 150;
+            }
+            with (obj_safety) {
+                role = "zone";
+                zone_x = objFootball.x;
+                zone_y = objFootball.y - 250;
+                zone_radius = 200;
+            }
+            with (obj_linebacker) {
+                role = "zone";
+                zone_x = objFootball.x;
+                zone_y = objFootball.y - 100; // Shallow zone
+                zone_radius = 120;
+            }
+            break;
+         case "prevent":
+          
+			with (obj_cornerback) {
+                role = "zone";
+                zone_x = objFootball.x;
+                zone_y = objFootball.y - 200; // Deep zones
+                zone_radius = 150;
+            }
+			
+            with (obj_linebacker) {
+                role = "zone";
+                zone_x = objFootball.x;
+                zone_y = objFootball.y - 100; // Shallow zone
+                zone_radius = 120;
+            }
+            break;
+        case "blitz_a":
+            with (obj_linebacker) {
+                role = "blitz";
+            }
+            with (obj_cornerback) {
+                role = "man";
+                target_player = instance_find(objWRParent, 0); // Example: covering WRs
+            }
+            with (obj_safety) {
+                role = "zone";
+                zone_x = objFootball.x;
+                zone_y = objFootball.y - 250;
+                zone_radius = 180;
+            }
+            break;
+
+        case "qb_spy":
+            with (obj_linebacker) {
+                role = "spy";
+            }
+            with (obj_cornerback) {
+                role = "man";
+                target_player = instance_find(objWRParent, 0);
+            }
+            break;
+			
+    }
+
+    // Set reaction timer for all defenders
+    with (obj_defender) {
+        alarm[0] = reaction_time * room_speed;
+        state = "idle";
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_color_to_hex
+File: scripts\scr_color_to_hex\scr_color_to_hex.gml
+------------------------------------------------------------------------------------------
+/// scr_color_to_hex(col)
+// Converts a GameMaker color (BGR integer) to a string like "$FFFFFF"
+// Returns "$FFFFFF" if value is bad.
+
+var col = argument0;
+
+if (is_undefined(col) || !is_real(col)) {
+    col = $FFFFFF;
+}
+col = col & $FFFFFF; // Only keep bottom 24 bits
+
+// Manual hex conversion (works in all GM versions)
+var hex = "$";
+var n = col;
+for (var i = 0; i < 6; ++i) {
+    var digit = (n >> ((5-i)*4)) & $F;
+    if (digit < 10) hex += chr(ord("0")+digit);
+    else hex += chr(ord("A")+digit-10);
+}
+return hex;
+
+
+==========================================================================================
+SCRIPT: scr_commit_roster_edits
+File: scripts\scr_commit_roster_edits\scr_commit_roster_edits.gml
+------------------------------------------------------------------------------------------
+/// scr_commit_roster_edits_to_template()
+//
+// Copies ALL edits from the open roster-editor overlay back into:
+//   • global.roster_editor_data         (session array)
+//   • global.teams["TEMPLATE"].roster   (template struct)
+//   • global.team_name / city / abbr    (for UI)
+//   • global.team_info["TEMPLATE"]      (so Create() reads new header)
+//
+// Call this once when the player confirms “YES – save”.
+
+//--------------------------------------------------
+// A. Get the open roster-editor instance
+//--------------------------------------------------
+var ro = instance_find(objTeamRosterEditor, 0);
+if (!instance_exists(ro)) {
+    show_debug_message("❌ roster editor not open – commit aborted");
+    return;
+}
+
+//--------------------------------------------------
+// B. Header strings (Team Name / City / Abbr)
+//--------------------------------------------------
+var team_name  = ro.team_name;
+var team_city  = ro.team_city;
+var team_abbr  = ro.team_abbr;
+
+// 1️⃣  store to convenience globals (Create event reads these)
+global.team_name  = team_name;
+global.team_city  = team_city;
+global.team_abbr  = team_abbr;
+
+//--------------------------------------------------
+// C. Ensure TEMPLATE struct exists
+//--------------------------------------------------
+if (!variable_global_exists("teams") || !ds_map_exists(global.teams, "TEMPLATE")) {
+    show_debug_message("❌ TEMPLATE team not found – commit aborted");
+    return;
+}
+var tmpl = global.teams[? "TEMPLATE"];
+
+//--------------------------------------------------
+// D. Copy player rows back into session array
+//--------------------------------------------------
+var rows = array_length(ro.grid_data);
+
+if (!variable_global_exists("roster_editor_data") || array_length(global.roster_editor_data) != rows)
+    global.roster_editor_data = array_create(rows, 0);
+
+for (var r = 0; r < rows; r++)
+{
+    var row = ro.grid_data[r];
+    if (row.type != "player") continue;
+
+    var idx = row.index;
+    if (idx >= array_length(global.roster_editor_data)) continue;
+
+    var ply = global.roster_editor_data[idx];
+    if (!is_struct(ply)) ply = {};                  // safeguard
+
+    // row.fields = [name,pos,speed,agility,tackle,durability]
+    ply.name       = row.fields[0];
+    ply.pos        = row.fields[1];
+    ply.speed      = real(row.fields[2]);
+    ply.agility    = real(row.fields[3]);
+    ply.tackle     = real(row.fields[4]);
+    ply.durability = real(row.fields[5]);
+
+    global.roster_editor_data[idx] = ply;           // write back
+}
+
+//--------------------------------------------------
+// E. Push edits into TEMPLATE struct
+//--------------------------------------------------
+tmpl.roster     = global.roster_editor_data;
+tmpl.team_name  = team_name;
+tmpl.city       = team_city;
+tmpl.team_abbr  = team_abbr;
+
+//--------------------------------------------------
+// F. Update global.team_info map (header persistence)
+//--------------------------------------------------
+if (!variable_global_exists("team_info"))
+    global.team_info = ds_map_create();
+
+var info_arr;
+if (ds_map_exists(global.team_info, "TEMPLATE"))
+    info_arr = global.team_info[? "TEMPLATE"];
+else
+    info_arr = ["", "", "", 0];
+
+info_arr[0] = team_name;
+info_arr[1] = team_city;
+info_arr[2] = team_abbr;
+global.team_info[? "TEMPLATE"] = info_arr;
+
+//--------------------------------------------------
+// G. Debug log
+//--------------------------------------------------
+show_debug_message("✅ commit complete – header + " + string(rows) + " players saved to TEMPLATE");
+
+
+==========================================================================================
+SCRIPT: scr_commit_roster_edits_to_template
+File: scripts\scr_commit_roster_edits_to_template\scr_commit_roster_edits_to_template.gml
+------------------------------------------------------------------------------------------
+/// scr_commit_roster_edits_to_template()
+///
+/// Commits any in-editor edits from the TEMPLATE team back to its file.
+/// Should only be called when the roster editor is closing or saving.
+
+if (!variable_global_exists("teams")) {
+    show_debug_message("scr_commit_roster_edits_to_template: global.teams not found — aborting.");
+    exit;
+}
+
+if (!ds_map_exists(global.teams, "TEMPLATE")) {
+    show_debug_message("scr_commit_roster_edits_to_template: TEMPLATE team not found — aborting.");
+    exit;
+}
+
+if (!variable_global_exists("team_name")) {
+    show_debug_message("scr_commit_roster_edits_to_template: global.team_name not set — aborting.");
+    exit;
+}
+
+var tname = global.team_name;
+var team  = global.teams[? "TEMPLATE"];
+
+// Make sure the JSON has a stable key:
+team.team_name = tname;
+
+// Persist to %LOCALAPPDATA%\teams\<tname>.json
+scr_team_save(team);
+
+show_debug_message("scr_commit_roster_edits_to_template: Saved team '" + string(tname) + "'.");
+
+
+==========================================================================================
+SCRIPT: scr_defender_move_towards
+File: scripts\scr_defender_move_towards\scr_defender_move_towards.gml
+------------------------------------------------------------------------------------------
+function scr_defender_move_towards(target_x, target_y, move_speed) {
+    /// Move a defensive player toward a target while avoiding offensive linemen.
+    /// This improved version uses mp_potential_step_object to find a path around blockers.
+
+    // Attempt to use built-in pathfinding to avoid collisions. mp_potential_step_object
+    // returns true if the instance moved. It will move toward (target_x,target_y) at move_speed
+    // while avoiding obj_offensive_lineman instances.
+    if (!mp_potential_step_object(target_x, target_y, move_speed, obj_offensive_lineman)) {
+        // If no path was possible, fall back to simple directional stepping with slight angle offsets
+        var dir    = point_direction(x, y, target_x, target_y);
+        var next_x = x + lengthdir_x(move_speed, dir);
+        var next_y = y + lengthdir_y(move_speed, dir);
+
+        if (!place_meeting(next_x, next_y, obj_offensive_lineman)) {
+            x = next_x;
+            y = next_y;
+        } else {
+            var angles = [15, -15, 30, -30];
+            var moved  = false;
+            for (var i = 0; i < array_length(angles); i++) {
+                var new_dir = dir + angles[i];
+                next_x = x + lengthdir_x(move_speed, new_dir);
+                next_y = y + lengthdir_y(move_speed, new_dir);
+                if (!place_meeting(next_x, next_y, obj_offensive_lineman)) {
+                    x = next_x;
+                    y = next_y;
+                    moved = true;
+                    break;
+                }
+            }
+            if (!moved) {
+                speed = 0;
+            }
+        }
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_draw_player_portrait
+File: scripts\scr_draw_player_portrait\scr_draw_player_portrait.gml
+------------------------------------------------------------------------------------------
+/// scr_draw_player_portrait(portrait_any, x, y, scale)
+
+// palettes safety (in case init wasn’t called yet)
+if (!variable_global_exists("PAL_SKIN"))  scr_portrait_palettes_init();
+
+// ----- Safe args -----
+var P  = scr_portrait_ensure(argument0);
+var _x = (argument_count >= 2 && is_real(argument1)) ? argument1 : 0;
+var _y = (argument_count >= 3 && is_real(argument2)) ? argument2 : 0;
+var sc = (argument_count >= 4 && is_real(argument3)) ? argument3 : 1;
+
+// ----- Helpers -----
+function _tint(arr, idx) {
+    if (is_array(arr) && idx >= 0 && idx < array_length(arr)) return arr[idx];
+    return c_white;
+}
+
+var skin_col  = _tint(global.PAL_SKIN,  P.head.color);
+var hair_col  = _tint(global.PAL_HAIR,  P.hair.color);
+var jew_col   = _tint(global.PAL_JEWEL, P.jewelry.color);
+var shirt_col = _tint(global.PAL_SHIRT, P.shirt.color);
+
+// ----- Draw stack -----
+if (sprite_exists(sprPortraitBase))
+    draw_sprite_ext(sprPortraitBase, 0, _x, _y, sc, sc, 0, c_white, 1);
+
+if (sprite_exists(sprPortraitShirt))
+    draw_sprite_ext(sprPortraitShirt, P.shirt.frame, _x, _y, sc, sc, 0, shirt_col, 1);
+
+if (sprite_exists(sprPortraitHead))
+    draw_sprite_ext(sprPortraitHead, P.head.frame, _x, _y, sc, sc, 0, skin_col, 1);
+
+if (sprite_exists(sprPortraitEyes) && P.eyes.frame >= 0)
+    draw_sprite_ext(sprPortraitEyes, P.eyes.frame, _x, _y, sc, sc, 0, c_white, 1);
+
+if (sprite_exists(sprPortraitNose) && P.nose.frame >= 0)
+    draw_sprite_ext(sprPortraitNose, P.nose.frame, _x, _y, sc, sc, 0, skin_col, 1);
+
+if (sprite_exists(sprPortraitMouth) && P.mouth.frame >= 0)
+    draw_sprite_ext(sprPortraitMouth, P.mouth.frame, _x, _y, sc, sc, 0, skin_col, 1);
+
+if (sprite_exists(sprPortraitHair) && P.hair.frame >= 0)
+    draw_sprite_ext(sprPortraitHair, P.hair.frame, _x, _y, sc, sc, 0, hair_col, 1);
+
+if (sprite_exists(sprPortraitBeard) && P.beard.frame >= 0)
+    draw_sprite_ext(sprPortraitBeard, P.beard.frame, _x, _y, sc, sc, 0, hair_col, 1);
+
+if (sprite_exists(sprPortraitMuStash) && P.mustache.frame >= 0)
+    draw_sprite_ext(sprPortraitMuStash, P.mustache.frame, _x, _y, sc, sc, 0, hair_col, 1);
+
+if (sprite_exists(sprPortraitGlasses) && P.glasses.frame >= 0)
+    draw_sprite_ext(sprPortraitGlasses, P.glasses.frame, _x, _y, sc, sc, 0, c_white, 1);
+
+if (sprite_exists(sprPortraitJewelry) && P.jewelry.frame >= 0)
+    draw_sprite_ext(sprPortraitJewelry, P.jewelry.frame, _x, _y, sc, sc, 0, jew_col, 1);
+
+
+==========================================================================================
+SCRIPT: scr_file_size
+File: scripts\scr_file_size\scr_file_size.gml
+------------------------------------------------------------------------------------------
+
+/// scr_file_size(path) – returns length in bytes
+function scr_file_size(_path)
+{
+    var fh   = file_bin_open(_path, fb_read);
+    var size = file_bin_size(fh);
+    file_bin_close(fh);
+    return size;
+}
+
+==========================================================================================
+SCRIPT: scr_file_write_string
+File: scripts\scr_file_write_string\scr_file_write_string.gml
+------------------------------------------------------------------------------------------
+/// scr_file_write_string(path, text)
+///
+/// Reliable helper that writes a full string to disk.
+/// Returns true on success, false on failure.
+
+function scr_file_write_string(_path, _text)
+{
+    var h = file_text_open_write(_path);
+    if (h < 0) return false;
+
+    file_text_write_string(h, string(_text));
+    file_text_close(h);
+    return true;
+}
+
+
+==========================================================================================
+SCRIPT: scr_gamepad_was_pressed
+File: scripts\scr_gamepad_was_pressed\scr_gamepad_was_pressed.gml
+------------------------------------------------------------------------------------------
+/// scr_gamepad_was_pressed(btn, pad)
+/// Safe wrapper around gamepad_button_check_pressed
+///
+/// btn : (constant)  gp_padl / gp_face1 / gp_start …
+/// pad : game-pad index 0-7  (defaults to 0)
+
+var _btn = argument_count > 0 ? argument0 : -1;
+var _pad = argument_count > 1 ? argument1 : 0;
+
+// If the button id is not a real number → just return false
+if (!is_real(_btn) || _btn < 0) return false;
+
+// If pad isn’t connected → false
+if (!gamepad_is_connected(_pad)) return false;
+
+return gamepad_button_check_pressed(_pad, _btn);
+
+
+==========================================================================================
+SCRIPT: scr_get_ballcarrier
+File: scripts\scr_get_ballcarrier\scr_get_ballcarrier.gml
+------------------------------------------------------------------------------------------
+function scr_get_ballcarrier() {
+	
+    var carrier = noone;
+
+    with (objWRParent) {
+        if (hasBall) {
+            carrier = id;
+            break;
+        }
+    }
+
+    if (carrier == noone && instance_exists(objFootball)) {
+        if (objFootball.attached_to != noone && instance_exists(objFootball.attached_to)) {
+            carrier = objFootball.attached_to;
+        }
+    }
+
+    return carrier;
+}
+
+
+==========================================================================================
+SCRIPT: scr_get_keyboard_char
+File: scripts\scr_get_keyboard_char\scr_get_keyboard_char.gml
+------------------------------------------------------------------------------------------
+/// @function scr_get_keyboard_char(_row, _col)
+/// @param {real} _row - The selected row index
+/// @param {real} _col - The selected column index
+
+var _row = argument0;
+var _col = argument1;
+
+// Validate arguments
+if (is_undefined(_row)) _row = 0;
+if (is_undefined(_col)) _col = 0;
+
+// Define keyboard layout (10 columns per row)
+var keyboard = [
+    "A","B","C","D","E","F","G","H","I","J",
+    "K","L","M","N","O","P","Q","R","S","T",
+    "U","V","W","X","Y","Z","0","1","2","3",
+    "4","5","6","7","8","9","_","-"," ","←","OK"
+];
+
+var index = _row * 10 + _col;
+
+// Clamp index to safe range
+index = clamp(index, 0, array_length(keyboard) - 1);
+
+// Return the character at this index
+return keyboard[index];
+
+
+==========================================================================================
+SCRIPT: scr_global_init
+File: scripts\scr_global_init\scr_global_init.gml
+------------------------------------------------------------------------------------------
+/// scr_global_init()
+/// Called during game start to initialize global data and folders.
+/// This now ensures that save directories, rosters map, team control map and logo sprite list exist.
+
+// Ensure save folders exist (logos, teams, rosters, extras)
+scr_initialize_folders();
+
+// Create global roster map if it doesn't exist or isn't a DS map
+if (!variable_global_exists("rosters") || !ds_exists(global.rosters, ds_type_map)) {
+    global.rosters = ds_map_create();
+}
+
+// Create global team control map if it doesn't exist or isn't a DS map
+if (!variable_global_exists("team_control") || !ds_exists(global.team_control, ds_type_map)) {
+    global.team_control = ds_map_create();
+}
+
+// Create logo_sprites list if it doesn't exist
+if (!variable_global_exists("logo_sprites")) {
+    global.logo_sprites = ds_list_create();
+}
+
+
+==========================================================================================
+SCRIPT: scr_Hand_Off_To_RB
+File: scripts\scr_Hand_Off_To_RB\scr_Hand_Off_To_RB.gml
+------------------------------------------------------------------------------------------
+/// scr_Hand_Off_To_RB(qb_instance)
+var qb = argument0;
+
+// Find the nearest RB to the QB
+var nearest_rb = noone;
+var min_dist = 99999;
+with (objRunningBacks)
+{
+    var dist = point_distance(qb.x, qb.y, x, y);
+    if (dist < min_dist)
+    {
+        min_dist = dist;
+        nearest_rb = id;
+    }
+}
+
+// If we found a running back, hand off!
+if (nearest_rb != noone)
+{
+	
+    global.player_has_ball = nearest_rb;
+    with (qb) { attached_to = noone; }
+
+    with (objFootball)
+    {
+        attached_to = nearest_rb;
+        visible = false;
+    }
+    with (nearest_rb)
+    {
+        attached_to = id;
+        hiked = true;
+        // Optional: Update sprite here
+        // sprite_index = sprRunWithBallgry;
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_init_custom_content
+File: scripts\scr_init_custom_content\scr_init_custom_content.gml
+------------------------------------------------------------------------------------------
+/// scr_init_custom_content()
+var dir_base = "data/custom/";
+if (!directory_exists(dir_base))        directory_create(dir_base);
+if (!directory_exists(dir_base + "logos"))   directory_create(dir_base + "logos");
+if (!directory_exists(dir_base + "teams"))   directory_create(dir_base + "teams");
+if (!directory_exists(dir_base + "rosters")) directory_create(dir_base + "rosters");
+if (!directory_exists(dir_base + "palettes")) directory_create(dir_base + "palettes");
+
+
+==========================================================================================
+SCRIPT: scr_initialize_folders
+File: scripts\scr_initialize_folders\scr_initialize_folders.gml
+------------------------------------------------------------------------------------------
+/// scr_initialize_folders()
+var dirs = [
+    game_save_id + "logos/",
+    game_save_id + "teams/",
+    game_save_id + "rosters/",
+    game_save_id + "extras/"
+];
+
+for (var i = 0; i < array_length(dirs); ++i) {
+    if (!directory_exists(dirs[i])) {
+        directory_create(dirs[i]);
+        show_debug_message("Created folder: " + dirs[i]);
+    } else {
+        show_debug_message("Folder exists: " + dirs[i]);
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_install_builtins_once
+File: scripts\scr_install_builtins_once\scr_install_builtins_once.gml
+------------------------------------------------------------------------------------------
+/// scr_install_builtins_once()
+
+function scr_install_builtins_once() {
+    var mark = game_save_id + "extras/builtins_installed.txt";
+    if (file_exists(mark)) return;
+
+    var out_dir = game_save_id + "teams/";
+    if (!directory_exists(out_dir)) directory_create(out_dir);
+
+    // List the built-ins you ship in Included Files:
+    var builtins = [
+        "data/builtin/teams/Eagles.json",
+        "data/builtin/teams/Broncos.json",
+        // add all the ones you want to ship…
+    ];
+
+    for (var i = 0; i < array_length(builtins); i++) {
+        var in_path  = builtins[i];
+        var raw_json = string_load(in_path);
+        if (string_length(raw_json) > 0) {
+            // Keep original file name after the last slash
+            var fname = in_path;
+            var cut   = string_last_pos("/", in_path);
+            if (cut > 0) fname = string_copy(in_path, cut + 1, string_length(in_path)-cut);
+
+            string_save(out_dir + fname, raw_json);
+        }
+    }
+
+    // Drop a marker so we don’t copy again
+    string_save(mark, "ok");
+}
+
+
+==========================================================================================
+SCRIPT: scr_load_custom_logos
+File: scripts\scr_load_custom_logos\scr_load_custom_logos.gml
+------------------------------------------------------------------------------------------
+/// scr_load_custom_logos()
+/// Loads user logo sprites from the custom logos folder
+
+global.custom_logos = [];
+
+var custom_logo_folder = game_save_id + "data/custom/logos/";
+if (!directory_exists(custom_logo_folder)) directory_create(custom_logo_folder);
+
+
+// Search for files
+var search_mask = custom_logo_folder + "*.*";
+var file = file_find_first(search_mask, fa_readonly | fa_archive | fa_hidden | fa_sysfile | fa_volumeid | fa_directory);
+var found_logo = false;
+
+while (file != "") {
+    // Exclude . and .. directories and subfolders
+    if (file != "." && file != "..") {
+        var file_path = custom_logo_folder + file;
+        var ext = string_copy(file, string_length(file) - 2, 3);
+        ext = string_lower(ext);
+
+        // Only allow PNG, JPG, BMP
+        if (ext == "png" || ext == "jpg" || ext == "bmp") {
+            var spr = sprite_add(file_path, 1, false, false, 0, 0);
+            if (spr != -1) {
+                array_push(global.custom_logos, spr);
+                found_logo = true;
+            }
+        }
+    }
+    file = file_find_next();
+}
+file_find_close();
+
+// Add fallback if none found
+if (!found_logo) {
+    if (sprite_exists(sprCustomLogo)) {
+        array_push(global.custom_logos, sprCustomLogo);
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_make_random_roster
+File: scripts\scr_make_random_roster\scr_make_random_roster.gml
+------------------------------------------------------------------------------------------
+/// scr_make_random_roster(n) -> array of players with stats + portrait
+function scr_make_random_roster(n)
+{
+    if (!variable_global_exists("PAL_SKIN")) scr_portrait_palettes_init();
+
+    // Position “shape” for a reasonable 53. Tweak if you like.
+    var shape = [
+        ["QB", 3], ["RB", 4], ["FB",1],
+        ["WR", 6], ["TE",3],
+        ["OL", 9],
+        ["DE",2], ["DT",3], ["DL",2], // you have DL too—keepers
+        ["LB",7],                      // mix of MLB/OLB if you prefer
+        ["CB",5], ["FS",2], ["SS",2], ["DB",2],
+        ["K",1], ["P",1], ["LS",1]
+    ];
+
+    // Flatten to a list of desired positions up to n
+    var positions = [];
+    for (var i = 0; i < array_length(shape); i++) {
+        var pos = shape[i][0], count = shape[i][1];
+        for (var c = 0; c < count; c++) array_push(positions, pos);
+    }
+    // pad or trim:
+    while (array_length(positions) < n) array_push(positions, "WR");
+    if (array_length(positions) > n) array_resize(positions, n);
+
+    var out = array_create(n, 0);
+
+    for (var idx = 0; idx < n; idx++) {
+        var pos = positions[idx];
+
+        // quick stat ranges by position (tune to your game feel)
+        var spd = irandom_range(50, 95);
+        var agi = irandom_range(50, 95);
+        var tck = irandom_range(20, 95);
+        var thr = irandom_range(10, 95);
+        var brs = irandom_range(40, 95);
+        var trk = irandom_range(20, 95);
+        var dur = irandom_range(60, 95);
+
+        // bias a few by role
+        switch (pos) {
+            case "QB": thr = irandom_range(80, 99); spd = irandom_range(55, 85); break;
+            case "RB": spd = irandom_range(80, 99); agi = irandom_range(75, 99); trk = irandom_range(45, 90); break;
+            case "WR": spd = irandom_range(82, 99); agi = irandom_range(80, 99); break;
+            case "TE": agi = irandom_range(65, 85); trk = irandom_range(60, 95); break;
+            case "OL": tck = irandom_range(75, 99); spd = irandom_range(45, 65); trk = irandom_range(70, 99); break;
+            case "DL": case "DE": case "DT":
+                tck = irandom_range(80, 99); spd = irandom_range(55, 80); trk = irandom_range(70, 99); break;
+            case "LB": tck = irandom_range(80, 99); spd = irandom_range(60, 88); break;
+            case "CB": case "FS": case "SS": case "DB":
+                spd = irandom_range(82, 99); agi = irandom_range(80, 99); tck = irandom_range(60, 90); break;
+            case "K":  thr = irandom_range(70, 95); spd = irandom_range(40, 60); break;
+            case "P":  thr = irandom_range(70, 95); spd = irandom_range(40, 60); break;
+            case "LS": tck = irandom_range(60, 85); spd = irandom_range(45, 65); break;
+        }
+
+        var num = irandom_range(1, 99);
+
+        out[idx] = {
+            name       : scr_random_name(), // small helper below
+            pos        : pos,
+            throw_pwr  : thr,
+            speed      : spd,
+            tackle     : tck,
+            agility    : agi,
+            burst      : brs,
+            truck      : trk,
+            durability : dur,
+            num        : num,
+            portrait   : scr_portrait_random() // uses your portrait stack
+        };
+    }
+    return out;
+}
+
+/// scr_random_name() – dumb name generator (swap with your own lists)
+function scr_random_name() {
+    var first = ["David","Michael","Robert","John","William","Joseph","Charles","Christopher","Daniel","Matthew","Anthony","Joshua","Nathan","Kevin","Brian","George","Edward","Timothy","Jason","Jeffrey","Ryan","Jacob","Gary","Nicholas","Eric","Stephen","Jonathan","Larry","Justin","Scott","Brandon","Frank","Benjamin","Samuel","Gregory","Patrick","Raymond","Jack","Dennis","Jerry","Tyler","Aaron","Henry","Walter","Peter","Douglas","Zachary","Harold","Carl","Russell","Philip","Ethan","Adam","Shawn","Cameron","Logan","Connor","Travis"];
+    var last  = ["Long","Johnson","Carter","Brown","Davis","Garcia","Martinez","Robinson","Lewis","Lee","Walker","Hall","Allen","Longoria","Adams","Baker","Gonzalez","Nelson","Mitchell","Perez","Roberts","Turner","Phillips","Campbell","Parker","Evans","Edwards","Collins","Stewart","Sanchez","Morris","Rogers","Reed","Cook","Morgan","Bell","Murphy","Bailey","Rivera","Cooper","Richardson","Cox","Howard","Ward","Torres","Peterson","Gray","Ramirez","James","Watson","Brooks","Kelly","Moore","Bennett","Turner","Scott","Bell","Hughes","Hill"];
+    return first[irandom(array_length(first)-1)] + " " + last[irandom(array_length(last)-1)];
+}
+
+
+==========================================================================================
+SCRIPT: scr_open_roster_editor
+File: scripts\scr_open_roster_editor\scr_open_roster_editor.gml
+------------------------------------------------------------------------------------------
+/// scr_open_roster_editor(roster_array)
+// Copies roster into session AND spawns the editor on a UI layer
+
+function scr_open_roster_editor(roster_array) {
+    // 1) copy session data
+    global.roster_editor_data = array_create(array_length(roster_array), 0);
+    array_copy(global.roster_editor_data, 0, roster_array, 0, array_length(roster_array));
+
+    // 2) make sure a UI layer exists
+    var ui_layer_name = "UI_Overlay";
+    if (layer_get_id(ui_layer_name) == -1) {
+        layer_create_depth(-100000, ui_layer_name);
+    }
+
+    // 3) spawn the editor itself on that layer
+    if (!instance_exists(objTeamRosterEditor)) {
+        var ed = instance_create_layer(0, 0, ui_layer_name, objTeamRosterEditor);
+        ed.depth = -1000000; // belt & suspenders in case of any non-GUI draw
+    }
+
+    // 4) flip a flag if your game checks it
+    global.roster_editor_active = true;
+}
+
+
+==========================================================================================
+SCRIPT: scr_palette_init
+File: scripts\scr_palette_init\scr_palette_init.gml
+------------------------------------------------------------------------------------------
+/// scr_palette_init(team_name)
+
+// Master color palette (unchanged from your original)
+global.master_palette = [
+    $363636,$FFFF00,$00FF00,$00FFFF,$0000FF,$FF00FF,$FFFFFF,$ECECEC,
+    $E2E2E2,$D7D7D7,$CDCDCD,$B7B7B7,$959595,$EE1C24,$FFF200,$00A651,
+    $00A99D,$00AEF0,$0072BC,$0068AB,$0054A6,$2E3192,$662D91,$92278F,
+    $ED008C,$EE145B,$9E0B0F,$A0410D,$A3620A,$ABA000,$197B30,$22B14C,
+    $1B9D93,$3FA9F5,$1C75BC,$1C6EA5,$0E59A4,$3D3C9B,$934FA1,$A348A4,
+    $EA4992,$ED1C5B,$D53340,$BD5415,$BF7020,$BFA829,$8DC63F,$39B54A,
+    $33CCCC,$00AEEF,$0082C9,$0071BC,$163CA4,$403DA4,$633EA1,$C0589D,
+    $E93F8E,$EA1C58,$D80F2F,$A23C1A,$A65F17,$BC9C1A,$799D3C,$009245,
+    $008C8C,$0084C8,$0066B3,$00448B,$4B33A2,$7E3E98,$AB4596,$F277B4,
+    $F25CA9,$CF2866,$B12017,$E1511A,$D47417,$D3BA18,$8DC73F
+];
+
+// Create team palettes map if it doesn't exist yet:
+if (!variable_global_exists("team_palettes")) {
+    global.team_palettes = ds_map_create();
+
+    var pal_default = [
+        $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF,$FFFFFF,
+        $FFFFFF, $00AEF0, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF,$FFFFFF,
+        $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF,$FFFFFF,
+        $3FA9F5, $FFFFFF, $00AEF0, $FFFFFF, $3FA9F5, $FFFFFF, $FFFFFF,
+        $FFFFFF, $FFFFFF, $3FA9F5, $111111, $FFFFFF, $FFFFFF, $FFFFFF,
+        $FFFFFF,$FFFFFF, $FFFFFF
+    ];
+
+    var pal_eagles = [
+        $EDDFEC, $FFFFFF, $EDDFEC, $FFFFFF, $FFFFFF, $FFFFFF, $CECEAD, $FFFFFF,
+        $0072AC, $FFFFFF, $22B14C, $196580, $39C13A, $FFFFFF, $FFFFFF, $22B14C,
+        $FFFFFF, $FFFFFF, $E2CFC2, $22B14C, $FFFFFF, $1C6E85, $FFFFFF, $0068AB,
+        $FFFFFF, $1C6E85, $FFFFFF, $22B14C, $FFFFFF, $E2CFC2, $1C6F8C, $111111,
+        $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $22B14C, $FFFFFF
+    ];
+
+    var pal_broncos = [
+        $050607,$000086,$ECECEC,$ECECEC,$ECECEC,$560093,
+		$0054A6,$EE145B,$0054A6,$8A0089,$F40000,$3939E5,
+		$9E0B0F,$505050,$EE1C24,$CB2600,$F52F00,$EE1C24,
+		$0000FF,$0000FF,$E35454,$0068AB,$E87800,$0054A6,
+		$F069F0,$0068AB,$63DD63,$F0BD00,$EEC39A,$FFFFFF,
+		$0068AB,$111111,$222222,$333333,$444444,$555555,
+		$0000FF,$666666
+    ];
+	var pal_ponchos = [
+        $FFFFFF,$FFFFFF,$FFFFFF,$ECECEC,$FFFFFF,$FFFFFF,$FFFFFF,
+		$FFFFFF,$00AEF0,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,
+		$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,
+		$3FA9F5,$FFFFFF,$00AEF0,$FFFFFF,$3FA9F5,$FFFFFF,$FFFFFF,
+		$FFFFFF,$FFFFFF,$3FA9F5,$111111,$FFFFFF,$FFFFFF,$FFFFFF,
+		$FFFFFF,$FFFFFF,$FFFFFF
+    ];
+var pal_americans = [
+        $B7B7B7,$FFFFFF,$B7B7B7,$D7D7D7,$D7D7D7,$FFFFFF,$0068AB,
+		$EE1C24,$0072BC,$FFFFFF,$0000FF,$BD5415,$0000FF,$FFFFFF,
+		$A0410D,$0000FF,$FFFFFF,$EE145B,$FFFFFF,$ECECEC,$FFFFFF,
+		$1C75BC,$FFFFFF,$0072BC,$FFFFFF,$1C75BC,$FFFFFF,$FFFFFF,
+		$FFFFFF,$FFFFFF,$1C75BC,$111111,$FFFFFF,$FFFFFF,$FFFFFF,
+		$FFFFFF,$FFFFFF,$FFFFFF
+    ];
+var pal_redraiders = [
+        $B7B7B7,$FFFFFF,$0000FF,$0000FF,$D7D7D7,$FFFFFF,$0068AB,$0000FF,
+		$0068AB,$FFFFFF,$0000FF,$0000FF,$0000FF,$FFFFFF,$0000FF,$0000FF,
+		$FFFFFF,$0000FF,$FFFFFF,$ECECEC,$FFFFFF,$1C6EA5,$FFFFFF,$0072BC,
+		$FFFFFF,$1C6EA5,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$1C75BC,$111111,
+		$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF
+    ];
+var pal_tennesseebears = [
+        $B7B7B7,$FFFFFF,$0000FF,$0000FF,$D7D7D7,$FFFFFF,$0068AB,$0000FF,
+		$0068AB,$FFFFFF,$0000FF,$0000FF,$0000FF,$FFFFFF,$0000FF,$0000FF,
+		$FFFFFF,$0000FF,$FFFFFF,$ECECEC,$FFFFFF,$1C6EA5,$FFFFFF,$0072BC,
+		$FFFFFF,$1C6EA5,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$1C75BC,$111111,
+		$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF
+    ];
+	
+	var pal_miamisharks = [
+        $B7B7B7,$FFFFFF,$FFFF00,$BFA829,$D7D7D7,$FFFFFF,$0068AB,$FFFFFF,
+		$0068AB,$FFFFFF,$FFF200,$FFF200,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,
+		$FFFFFF,$BC9C1A,$FFFFFF,$FFF200,$FFFFFF,$1C6EA5,$FFFFFF,$0072BC,
+		$FFFFFF,$1C6EA5,$FFFFFF,$FFFFFF,$FFFFFF,$00AEF0,$1C6EA5,$111111,
+		$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF
+    ];
+	var pal_peckers = [
+       $ECECEC,$FFFFFF,$00FFFF,$00FFFF,$FFFFFF,$FFFFFF,$00FFFF,$00A651,
+	   $00AEF0,$FFFFFF,$22B14C,$22B14C,$22B14C,$FFFFFF,$ECECEC,$22B14C,
+	   $FFFFFF,$00A99D,$39B54A,$00FFFF,$22B14C,$3FA9F5,$FFFFFF,$00AEF0,
+	   $FFFFFF,$3FA9F5,$FFFFFF,$22B14C,$FFFFFF,$00FFFF,$3FA9F5,$111111,
+	   $FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$00FFFF,$FFFFFF
+
+    ];
+	var pal_steelcity = [
+       $B7B7B7,$FFFFFF,$363636,$363636,$D7D7D7,$FFFFFF,$0068AB,
+       $00FFFF,$0068AB,$FFFFFF,$00FFFF,$00FFFF,$00FFFF,$FFFFFF,
+       $363636,$363636,$FFFFFF,$33CCCC,$00FFFF,$ECECEC,$FFFFFF,
+       $1C6EA5,$FFFFFF,$0072BC,$FFFFFF,$1C6EA5,$FFFFFF,$00FFFF,
+       $FFFFFF,$363636,$1C75BC,$111111,$FFFFFF,$FFFFFF,$FFFFFF,
+       $FFFFFF,$FFFFFF,$FFFFFF
+
+    ];
+	var pal_puffs = [
+      $00AEF0,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,
+      $0000FF,$00AEF0,$FFFFFF,$0000FF,$FFFFFF,$FFFFFF,$FFFFFF,
+      $0000FF,$00AEF0,$FFFFFF,$ECECEC,$0000FF,$FFFFFF,$00AEF0,
+      $3FA9F5,$FFFFFF,$00AEF0,$FFFFFF,$3FA9F5,$FFFFFF,$00AEF0,
+      $FFFFFF,$FFFFFF,$3FA9F5,$00AEF0,$FFFFFF,$FFFFFF,$FFFFFF,
+      $FFFFFF,$0000FF,$FFFFFF
+
+    ];
+	var pal_bolts = [
+      $D7D7D7,$FFFFFF,$D53340,$EE145B,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,
+      $00AEF0,$FFFFFF,$FFFFFF,$EE145B,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,
+      $FFFFFF,$EE145B,$FFFFFF,$FFFFFF,$FFFFFF,$3FA9F5,$FFFFFF,$00AEF0,
+      $FFFFFF,$3FA9F5,$FFFFFF,$00FFFF,$FFFFFF,$00FFFF,$3FA9F5,$00FFFF,
+      $FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$00FFFF,$FFFFFF
+
+    ];
+	var pal_buffalos = [
+      $FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,
+	  $00AEF0,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$0000FF,
+	  $FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$3FA9F5,$FFFFFF,$00AEF0,
+	  $FFFFFF,$3FA9F5,$FFFFFF,$FFFFFF,$FFFFFF,$0000FF,$3FA9F5,$111111,
+	  $FFFFFF,$FFFFFF,$FFFFFF,$FFFFFF,$9E0B0F,$FFFFFF
+
+    ];
+    ds_map_add(global.team_palettes, "Default", pal_default);
+    ds_map_add(global.team_palettes, "Eagles", pal_eagles);
+    ds_map_add(global.team_palettes, "Broncos", pal_broncos);
+	ds_map_add(global.team_palettes, "Ponchos", pal_ponchos);
+	ds_map_add(global.team_palettes, "Americans", pal_americans);
+	ds_map_add(global.team_palettes, "Red Raiders", pal_redraiders);
+	ds_map_add(global.team_palettes, "Tennessee Bears", pal_tennesseebears);
+	ds_map_add(global.team_palettes, "Steel City", pal_steelcity);
+	ds_map_add(global.team_palettes, "Miami Sharks", pal_miamisharks);
+	ds_map_add(global.team_palettes, "Peckers", pal_peckers);
+	ds_map_add(global.team_palettes, "Puffs", pal_puffs);
+	ds_map_add(global.team_palettes, "Bolts", pal_bolts);
+	ds_map_add(global.team_palettes, "Buffalos", pal_buffalos);
+
+}
+
+// Set global.current_pal based on argument
+if (ds_map_exists(global.team_palettes, argument0)) {
+    global.current_pal = global.team_palettes[? argument0];
+    global.current_team = argument0;
+} else {
+    global.current_pal = global.team_palettes[? "Default"];
+    global.current_team = "Default";
+}
+
+global.palette_size = array_length(global.current_pal);
+global.selected_sw = -1;
+
+scr_palette_surface_refresh();
+
+
+
+==========================================================================================
+SCRIPT: scr_palette_init_away
+File: scripts\scr_palette_init_away\scr_palette_init_away.gml
+------------------------------------------------------------------------------------------
+/// scr_palette_init_away(team_name)
+//
+//  • Reads from the same global.team_palettes map you already have
+//  • Writes to _away globals so it never interferes with the “home” values
+//  • Finishes by rebuilding the away palette surface
+/// scr_palette_init_away(team_name)
+
+// ------------------------------------------------------------
+// Ensure the palette map exists. If not, build it via the
+// original home script (once) with the default palette.
+// ------------------------------------------------------------
+if (!variable_global_exists("team_palettes"))
+{
+    // NOTE: scr_palette_init() will create the map & default palette
+    scr_palette_init("Default");
+}
+
+var team_name = argument0;
+
+// ---------- pull palette ----------
+if (ds_map_exists(global.team_palettes, team_name))
+{
+    global.current_pal_away  = global.team_palettes[? team_name];
+    global.current_team_away = team_name;
+}
+else
+{
+    global.current_pal_away  = global.team_palettes[? "Default"];
+    global.current_team_away = "Default";
+}
+
+global.palette_size_away = array_length(global.current_pal_away);
+
+// ---------- build / refresh surface ----------
+scr_palette_surface_refresh_away();
+
+
+==========================================================================================
+SCRIPT: scr_palette_surface_refresh
+File: scripts\scr_palette_surface_refresh\scr_palette_surface_refresh.gml
+------------------------------------------------------------------------------------------
+
+if (variable_global_exists("pal_surf") && surface_exists(global.pal_surf))
+    surface_free(global.pal_surf);
+
+var pal_len = array_length(global.current_pal); // SAFEST!
+
+global.pal_surf = surface_create(pal_len, 1);
+surface_set_target(global.pal_surf);
+draw_clear_alpha(c_black, 0);
+
+for (var i = 0; i < pal_len; ++i) {
+    draw_set_colour(global.current_pal[i]);
+    draw_point(i, 0);
+}
+
+surface_reset_target();
+
+
+
+
+
+==========================================================================================
+SCRIPT: scr_palette_surface_refresh_away
+File: scripts\scr_palette_surface_refresh_away\scr_palette_surface_refresh_away.gml
+------------------------------------------------------------------------------------------
+/// scr_palette_surface_refresh_away()
+///
+/// Uses - global.current_pal_away  (array of colours)
+///      - global.pal_surf_away     (target surface)
+
+if (variable_global_exists("pal_surf_away") && surface_exists(global.pal_surf_away))
+    surface_free(global.pal_surf_away);
+
+// always derive length from the array actually present
+var pal_len = array_length(global.current_pal_away);
+if (pal_len <= 0) exit;      // nothing to draw
+
+global.pal_surf_away = surface_create(pal_len, 1);
+surface_set_target(global.pal_surf_away);
+draw_clear_alpha(c_black, 0);
+
+for (var i = 0; i < pal_len; ++i)
+{
+    draw_set_colour(global.current_pal_away[i]);
+    draw_point(i, 0);
+}
+
+surface_reset_target();
+
+
+==========================================================================================
+SCRIPT: scr_PocketPasser
+File: scripts\scr_PocketPasser\scr_PocketPasser.gml
+------------------------------------------------------------------------------------------
+/// scr_PocketPasser – Pocket pass with robust variable handling
+/// Call from QB Step: if (scr_PocketPasser()) return;
+
+// --- TUNING VARIABLES (Adjust these!) ---
+var pull_enter_threshold     = 0.35;  // Stick pull to ENTER aiming
+var pull_release_threshold   = 0.20;  // Stick let-go to FIRE throw
+var pocket_cooldown_frames   = 30;    // Frames after throw/cancel before re-aim
+
+var hand_offset_x            = 32;    // QB hand offset X (pixels)
+var hand_offset_y            = 22;    // QB hand offset Y (pixels)
+
+var max_throw_distance       = 1200;   // FARTHEST pass (when stick fully back)
+var min_throw_distance       = 50;   // CLOSEST pass (just barely pulled)
+
+var max_arc_height           = 300;   // Highest rainbow lob
+var min_arc_height           = 150;    // Flattest
+
+var speed_divisor            = 32;    // Lower = faster ball speed
+var min_throw_speed          = 2;
+var max_throw_speed          = 5;
+
+var pull_curve_exponent      = 1.8;   // >1 makes mid-pull slower/longer
+
+var dot_count                = 12;    // Number of preview dots (must match Create)
+var min_flight_frames        = 6;
+var max_flight_frames        = 60;
+
+// --- Defensive: Make sure all needed variables exist ---
+if (!variable_instance_exists(self, "pocket_aiming")) return false;
+if (!variable_instance_exists(self, "dot_count"))     return false;
+if (!variable_instance_exists(self, "pocket_arc"))    return false;
+if (!variable_instance_exists(self, "hiked"))         return false;
+if (!variable_instance_exists(self, "attached_to"))   return false;
+if (!variable_instance_exists(self, "pocket_cooldown")) return false;
+
+// --- Only run when hiked and you have the ball ---
+if (!hiked || attached_to != id) return false;
+if (pocket_cooldown > 0) pocket_cooldown--;
+
+// --- Input ---
+var lx = gamepad_axis_value(0, gp_axisrh);
+var ly = gamepad_axis_value(0, gp_axisrv);
+var pull = point_distance(0, 0, lx, ly);
+var in_pocket = place_meeting(x, y, objQBPocket);
+
+// --- ENTER AIM MODE ---
+if (!pocket_aiming && pocket_cooldown == 0 && in_pocket && pull > pull_enter_threshold) {
+    pocket_aiming = true;
+    pocket_pulled = true;
+    key_held = -1;
+    key_hold_timer = 0;
+}
+
+// --- CANCEL with LB ---
+if (pocket_aiming && gamepad_button_check_pressed(0, gp_shoulderlb)) {
+    pocket_aiming   = false;
+    pocket_pulled   = false;
+    pocket_cooldown = pocket_cooldown_frames;
+    return false;
+}
+
+// --- Not aiming? Let regular QB logic run ---
+if (!pocket_aiming) return false;
+
+// --- Build and lock preview arc (while stick is still pulled back) ---
+var hand_x = x + hand_offset_x;
+var hand_y = y + hand_offset_y;
+
+// Invert so pulling stick back throws farther!
+var fx = (pull < 0.01) ? 1 : -lx;
+var fy = (pull < 0.01) ? 0 : -ly;
+
+var aim_dir   = point_direction(0, 0, fx, fy);
+var aim_power = clamp(pull, 0, 1);
+
+// Stick farther = longer throw!
+var curve = power(aim_power, pull_curve_exponent);
+var dist  = lerp(max_throw_distance, min_throw_distance, curve);  // Note: min/max order!
+var arc_h = lerp(min_arc_height,     max_arc_height,     curve);
+
+pocket_aim_dir   = aim_dir;
+pocket_aim_power = aim_power;
+
+// Recompute arc/target lock ONLY if stick is still back
+if (pull >= pull_release_threshold)
+{
+    for (var i = 0; i < dot_count - 1; i++) {
+        var t  = i / (dot_count - 1);
+        var px = hand_x + lengthdir_x(dist * t, aim_dir);
+        var py = hand_y + lengthdir_y(dist * t, aim_dir) - sin(pi * t) * arc_h;
+        pocket_arc[i] = [px, py];
+    }
+    // End X
+    var tx = hand_x + lengthdir_x(dist, aim_dir);
+    var ty = hand_y + lengthdir_y(dist, aim_dir);
+    pocket_arc[dot_count - 1] = [tx, ty];
+
+    // Lock in for throw
+    pocket_lock_dist  = dist;
+    pocket_lock_arc_h = arc_h;
+    pocket_lock_dir   = aim_dir;
+    pocket_lock_tx    = tx;
+    pocket_lock_ty    = ty;
+}
+
+// --- RELEASE STICK: PASS! ---
+if (pocket_pulled && pull < pull_release_threshold) {
+    var raw_spd = pocket_lock_dist / speed_divisor;
+    var spd     = clamp(raw_spd, min_throw_speed, max_throw_speed);
+    var ball_spd= min(spd, pocket_lock_dist - 1);
+    audio_play_sound(sndBomb,0,false);
+    with (objFootball)
+    {
+        pass_was_caught     = false;
+        attached_to         = noone;
+        play_active         = true;
+        visible             = true;
+        x                   = hand_x;
+        y                   = hand_y;
+        direction           = point_direction(
+                                 x, y,
+                                 other.pocket_lock_tx,
+                                 other.pocket_lock_ty);
+        speed               = ball_spd;
+        target_x            = other.pocket_lock_tx;
+        target_y            = other.pocket_lock_ty;
+        var f = clamp(
+                   other.pocket_lock_dist / speed,
+                   min_flight_frames,
+                   max_flight_frames);
+        visual_arc_total    = f;
+        visual_arc_peak     = other.pocket_lock_arc_h;
+        visual_arc_time     = 0;
+    }
+    // QB state reset
+    attached_to       = noone;
+    can_throw         = false;
+    throw_cooldown    = 5;
+    pocket_cooldown   = pocket_cooldown_frames;
+    pocket_aiming     = false;
+    pocket_pulled     = false;
+    return false;
+}
+
+// Still aiming—block the rest of QB logic
+return true;
+
+
+==========================================================================================
+SCRIPT: scr_portrait_clone
+File: scripts\scr_portrait_clone\scr_portrait_clone.gml
+------------------------------------------------------------------------------------------
+/// scr_portrait_clone(p_any) -> portrait_struct (deep copy, safe)
+var s = scr_portrait_ensure(argument0); // <-- normalize missing parts first
+
+return {
+    head:       { frame: s.head.frame,       color: s.head.color },
+    hair:       { frame: s.hair.frame,       color: s.hair.color },
+    beard:      { frame: s.beard.frame,      color: s.beard.color },
+    mustache:   { frame: s.mustache.frame,   color: s.mustache.color },
+    eyes:       { frame: s.eyes.frame,       color: s.eyes.color },
+    nose:       { frame: s.nose.frame,       color: s.nose.color },
+    mouth:      { frame: s.mouth.frame,      color: s.mouth.color },
+    glasses:    { frame: s.glasses.frame,    color: s.glasses.color },
+    jewelry:    { frame: s.jewelry.frame,    color: s.jewelry.color },
+    shirt:      { frame: s.shirt.frame,      color: s.shirt.color }
+};
+
+
+==========================================================================================
+SCRIPT: scr_portrait_default
+File: scripts\scr_portrait_default\scr_portrait_default.gml
+------------------------------------------------------------------------------------------
+/// scr_portrait_default()
+return {
+    head:       {frame: 0, color: 2},   // skin index (0..11)
+    hair:       {frame: 0, color: 0},
+    beard:      {frame: -1, color: 0},  // -1 = hidden
+    mustache:   {frame: -1, color: 0},
+    eyes:       {frame: 0, color: -1},  // -1 = no tint
+    nose:       {frame: 0, color: 2},   // match skin
+    mouth:      {frame: 0, color: 2},   // match skin
+    glasses:    {frame: -1, color: -1},
+    jewelry:    {frame: -1, color: 0},  // silver default
+    shirt:      {frame: 0, color: 0},
+};
+
+
+==========================================================================================
+SCRIPT: scr_portrait_ensure
+File: scripts\scr_portrait_ensure\scr_portrait_ensure.gml
+------------------------------------------------------------------------------------------
+/// scr_portrait_ensure(portrait_any) -> portrait_struct
+/// Guarantees a complete portrait struct with all sub-objects {frame,color}
+var P = argument0;
+
+// start with default if missing/invalid
+if (!is_struct(P)) P = scr_portrait_default();
+
+// ensure each part exists
+function _ensure_part(obj, def_frame, def_color) {
+    if (!is_struct(obj)) return { frame: def_frame, color: def_color };
+    if (!variable_struct_exists(obj, "frame")) obj.frame = def_frame;
+    if (!variable_struct_exists(obj, "color")) obj.color = def_color;
+    return obj;
+}
+
+var D = scr_portrait_default();
+
+P.head     = _ensure_part(variable_struct_exists(P,"head")     ? P.head     : undefined, D.head.frame,     D.head.color);
+P.hair     = _ensure_part(variable_struct_exists(P,"hair")     ? P.hair     : undefined, D.hair.frame,     D.hair.color);
+P.beard    = _ensure_part(variable_struct_exists(P,"beard")    ? P.beard    : undefined, D.beard.frame,    D.beard.color);
+P.mustache = _ensure_part(variable_struct_exists(P,"mustache") ? P.mustache : undefined, D.mustache.frame, D.mustache.color);
+P.eyes     = _ensure_part(variable_struct_exists(P,"eyes")     ? P.eyes     : undefined, D.eyes.frame,     D.eyes.color);
+P.nose     = _ensure_part(variable_struct_exists(P,"nose")     ? P.nose     : undefined, D.nose.frame,     D.nose.color);
+P.mouth    = _ensure_part(variable_struct_exists(P,"mouth")    ? P.mouth    : undefined, D.mouth.frame,    D.mouth.color);
+P.glasses  = _ensure_part(variable_struct_exists(P,"glasses")  ? P.glasses  : undefined, D.glasses.frame,  D.glasses.color);
+P.jewelry  = _ensure_part(variable_struct_exists(P,"jewelry")  ? P.jewelry  : undefined, D.jewelry.frame,  D.jewelry.color);
+P.shirt    = _ensure_part(variable_struct_exists(P,"shirt")    ? P.shirt    : undefined, D.shirt.frame,    D.shirt.color);
+
+return P;
+
+
+==========================================================================================
+SCRIPT: scr_portrait_palettes_init
+File: scripts\scr_portrait_palettes_init\scr_portrait_palettes_init.gml
+------------------------------------------------------------------------------------------
+// Script/// scr_portrait_palettes_init()
+
+global.PAL_SKIN  = [ $E8A45F,$E08034,$A3620A,$663D06,$4C2D04 ];
+global.PAL_HAIR  = [ $5A3A1C, $E6D38C, $C86432, $1A1A1A, $EAEAEA ]; // brown, blonde, orange-ish, black, white
+global.PAL_BEARD = global.PAL_HAIR;
+global.PAL_JEWEL = [ $C0C0C0, $C8A200 ]; // silver, gold
+global.PAL_SHIRT = [ $1F77B4,$2CA02C,$D62728,$9467BD,$8C564B,$E377C2,$7F7F7F,$BCBD22,$17BECF,$FF7F0E,$0055AA,$8800FF ];
+
+
+==========================================================================================
+SCRIPT: scr_portrait_random
+File: scripts\scr_portrait_random\scr_portrait_random.gml
+------------------------------------------------------------------------------------------
+/// scr_portrait_random()
+var p = scr_portrait_default();
+
+p.head.color  = irandom_range(0, array_length(global.PAL_SKIN)-1);
+p.nose.color  = p.head.color;
+p.mouth.color = p.head.color;
+
+var _hair_frames = max(1, sprite_exists(sprPortraitHair)    ? sprite_get_number(sprPortraitHair)    : 1);
+var _beard_frames= max(1, sprite_exists(sprPortraitBeard)   ? sprite_get_number(sprPortraitBeard)   : 1);
+var _stache_frames=max(1,sprite_exists(sprPortraitMuStash)  ? sprite_get_number(sprPortraitMuStash) : 1);
+var _glasses_frames=max(1,sprite_exists(sprPortraitGlasses) ? sprite_get_number(sprPortraitGlasses) : 1);
+var _jew_frames   = max(1, sprite_exists(sprPortraitJewelry)? sprite_get_number(sprPortraitJewelry) : 1);
+
+p.hair.frame  = irandom(_hair_frames - 1);
+p.hair.color  = irandom_range(0, array_length(global.PAL_HAIR)-1);
+
+// 40% beard/stache chance
+if (irandom(9) < 4) { p.beard.frame = irandom(_beard_frames - 1);  p.beard.color = p.hair.color; }
+if (irandom(9) < 4) { p.mustache.frame = irandom(_stache_frames - 1); p.mustache.color = p.hair.color; }
+
+// 15% glasses, 25% jewelry
+if (irandom(99) < 15) p.glasses.frame = irandom(_glasses_frames - 1);
+if (irandom(99) < 25) { p.jewelry.frame = irandom(_jew_frames - 1);
+                         p.jewelry.color = irandom_range(0, array_length(global.PAL_JEWEL)-1); }
+
+p.shirt.color = irandom_range(0, array_length(global.PAL_SHIRT)-1);
+return p;
+
+
+==========================================================================================
+SCRIPT: scr_read_string
+File: scripts\scr_read_string\scr_read_string.gml
+------------------------------------------------------------------------------------------
+/// scr_read_string( path )  ▸ returns whole file
+function scr_read_string(p)
+{
+    if (!file_exists(p)) return "";
+    var fh = file_text_open_read(p), s = "";
+    while (!file_text_eof(fh))
+    {
+        s += file_text_read_string(fh);
+        if (!file_text_eof(fh)) file_text_readln(fh);
+    }
+    file_text_close(fh);
+    return s;
+}
+
+
+
+==========================================================================================
+SCRIPT: scr_reset_roster_editor_state
+File: scripts\scr_reset_roster_editor_state\scr_reset_roster_editor_state.gml
+------------------------------------------------------------------------------------------
+/// scr_reset_roster_editor_state
+/// This is a SCRIPT to reset all roster editor UI objects and states.
+
+// Destroy UI Objects if they exist
+if (instance_exists(objModalDimmer)) with (objModalDimmer) instance_destroy();
+if (instance_exists(objTeamRosterEditor)) with (objTeamRosterEditor) instance_destroy();
+if (instance_exists(objVirtualKeyboard)) with (objVirtualKeyboard) instance_destroy();
+if (instance_exists(objComingSoonPopup)) with (objComingSoonPopup) instance_destroy();
+if (instance_exists(objExitConfirm)) with (objExitConfirm) instance_destroy();
+
+// Reset global flags
+global.roster_editor_active = false;
+global.ui_overlay_active = false;
+global.coming_soon_active = false;
+
+
+==========================================================================================
+SCRIPT: scr_roster_apply_grid_to_models
+File: scripts\scr_roster_apply_grid_to_models\scr_roster_apply_grid_to_models.gml
+------------------------------------------------------------------------------------------
+/// scr_roster_apply_grid_to_models(teamname, grid_data, team_name, team_city, team_abbr)
+var _teamname = argument0;
+var _grid     = argument1;
+var _tname    = argument2;
+var _tcity    = argument3;
+var _tabbr    = argument4;
+
+// --- ensure the team_info map exists ---
+if (!variable_global_exists("team_info") || !ds_exists(global.team_info, ds_type_map)) {
+    global.team_info = ds_map_create();
+}
+
+// --- team header back into global.team_info ---
+if (!ds_map_exists(global.team_info, _teamname)) {
+    global.team_info[? _teamname] = ["", "", "", 0];
+}
+var info_arr = global.team_info[? _teamname];
+if (!is_array(info_arr) || array_length(info_arr) < 4) {
+    var patched = array_create(4,0);
+    if (is_array(info_arr) && array_length(info_arr) > 0) patched[0] = info_arr[0];
+    if (is_array(info_arr) && array_length(info_arr) > 1) patched[1] = info_arr[1];
+    if (is_array(info_arr) && array_length(info_arr) > 2) patched[2] = info_arr[2];
+    info_arr = patched;
+}
+info_arr[0] = _tname;
+info_arr[1] = _tcity;
+info_arr[2] = _tabbr;
+global.team_info[? _teamname] = info_arr;
+
+// --- player rows back into global.roster_editor_data ---
+for (var i = 0; i < array_length(_grid); i++) {
+    var row = _grid[i];
+    if (is_struct(row) && row.type == "player") {
+        var idx = row.index;
+        if (idx >= 0 && idx < array_length(global.roster_editor_data)) {
+            var p = global.roster_editor_data[idx];
+            if (!is_struct(p)) p = {};
+            // fields: [name, pos, speed, agility, tackle, durability]
+            var f = row.fields;
+            p.name       = f[0];
+            p.pos        = f[1];
+            p.speed      = real(f[2]);
+            p.agility    = real(f[3]);
+            p.tackle     = real(f[4]);
+            p.durability = real(f[5]);
+            // NOTE: portraits are edited live in the editor; we leave p.portrait untouched
+            global.roster_editor_data[idx] = p;
+        }
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_safe_ds_map_keys
+File: scripts\scr_safe_ds_map_keys\scr_safe_ds_map_keys.gml
+------------------------------------------------------------------------------------------
+/// scr_safe_ds_map_keys(dsmap)
+var dsmap = argument0;
+if (is_undefined(dsmap) || !ds_exists(dsmap, ds_type_map)) return [];
+var keys = [];
+var _k = ds_map_find_first(dsmap);
+while (!is_undefined(_k)) {
+    array_push(keys, _k);
+    _k = ds_map_find_next(dsmap, _k);
+}
+return keys;
+
+
+==========================================================================================
+SCRIPT: scr_save_team_data
+File: scripts\scr_save_team_data\scr_save_team_data.gml
+------------------------------------------------------------------------------------------
+/// scr_save_team_data
+
+// Commit edits from roster_editor_data back to TEMPLATE
+
+if (variable_global_exists("teams") && ds_map_exists(global.teams, "TEMPLATE")) {
+    var current_team = global.teams[? "TEMPLATE"];
+
+    // Save Team Info
+    current_team.team_name = team_name;
+    current_team.city = team_city;
+    current_team.team_abbr = team_abbr;
+
+    // Deep Copy Roster Data
+    var new_roster = array_create(array_length(global.roster_editor_data), 0);
+    for (var i = 0; i < array_length(global.roster_editor_data); i++) {
+        new_roster[i] = global.roster_editor_data[i];
+    }
+
+    current_team.roster = new_roster;
+
+    // Debug Output: After Save
+    show_debug_message("=== TEMPLATE ROSTER AFTER SAVE ===");
+    for (var i = 0; i < array_length(current_team.roster); i++) {
+        var player = current_team.roster[i];
+        show_debug_message("[" + string(i) + "] " + player.name);
+    }
+
+    show_debug_message("[SAVE] Team Data Committed to TEMPLATE.");
+} else {
+    show_debug_message("ERROR: Could not save team data - TEMPLATE not found.");
+}
+
+
+==========================================================================================
+SCRIPT: scr_seed_teams
+File: scripts\scr_seed_teams\scr_seed_teams.gml
+------------------------------------------------------------------------------------------
+/// scr_seed_teams()
+
+// Create default team
+var team = {};
+
+team.team_name = "Generics";
+team.city = "Metro City";
+team.logo = 0;
+
+// Use your full 39-color default palette
+team.colours = [
+    $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF,
+    $FFFFFF, $00AEF0, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF,
+    $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF, $FFFFFF,
+    $3FA9F5, $FFFFFF, $00AEF0, $FFFFFF, $3FA9F5, $FFFFFF, $FFFFFF,
+    $FFFFFF, $FFFFFF, $3FA9F5, $111111, $FFFFFF, $FFFFFF, $FFFFFF,
+    $FFFFFF, $FFFFFF, $FFFFFF
+];
+
+// Default full roster: 53 players + 10 alternates
+team.roster = [
+{name: "David Long", pos: "QB", throw_pwr: 91, speed: 74, tackle: 27, agility: 72, burst: 62, truck: 22, durability: 75, num: 81},
+{name: "Michael Johnson", pos: "QB", throw_pwr: 95, speed: 66, tackle: 19, agility: 65, burst: 69, truck: 14, durability: 84, num: 6},
+{name: "David Carter", pos: "QB", throw_pwr: 89, speed: 66, tackle: 22, agility: 64, burst: 60, truck: 10, durability: 84, num: 56},
+{name: "Robert Brown", pos: "RB", throw_pwr: 14, speed: 90, tackle: 32, agility: 86, burst: 85, truck: 54, durability: 85, num: 5},
+{name: "John Davis", pos: "RB", throw_pwr: 19, speed: 83, tackle: 50, agility: 87, burst: 85, truck: 62, durability: 86, num: 53},
+{name: "William Garcia", pos: "RB", throw_pwr: 16, speed: 91, tackle: 31, agility: 86, burst: 91, truck: 54, durability: 79, num: 99},
+{name: "Joseph Martinez", pos: "FB", throw_pwr: 17, speed: 70, tackle: 52, agility: 62, burst: 68, truck: 91, durability: 90, num: 48},
+{name: "Charles Robinson", pos: "WR", throw_pwr: 11, speed: 96, tackle: 24, agility: 86, burst: 92, truck: 40, durability: 78, num: 49},
+{name: "Christopher Lewis", pos: "WR", throw_pwr: 12, speed: 85, tackle: 27, agility: 90, burst: 85, truck: 33, durability: 78, num: 21},
+{name: "Daniel Lee", pos: "WR", throw_pwr: 10, speed: 98, tackle: 26, agility: 92, burst: 90, truck: 45, durability: 78, num: 17},
+{name: "Matthew Walker", pos: "WR", throw_pwr: 19, speed: 85, tackle: 31, agility: 87, burst: 92, truck: 39, durability: 84, num: 69},
+{name: "Anthony Hall", pos: "WR", throw_pwr: 13, speed: 95, tackle: 24, agility: 89, burst: 89, truck: 46, durability: 73, num: 35},
+{name: "Joshua Allen", pos: "WR", throw_pwr: 20, speed: 97, tackle: 31, agility: 87, burst: 92, truck: 50, durability: 73, num: 83},
+{name: "Nathan Longoria", pos: "TE", throw_pwr: 17, speed: 81, tackle: 65, agility: 82, burst: 66, truck: 66, durability: 86, num: 84},
+{name: "Kevin Adams", pos: "TE", throw_pwr: 17, speed: 74, tackle: 62, agility: 72, burst: 77, truck: 82, durability: 75, num: 63},
+{name: "Brian Baker", pos: "TE", throw_pwr: 16, speed: 83, tackle: 64, agility: 75, burst: 73, truck: 84, durability: 89, num: 76},
+{name: "George Gonzalez", pos: "OL", throw_pwr: 12, speed: 51, tackle: 71, agility: 58, burst: 57, truck: 87, durability: 88, num: 71},
+{name: "Edward Nelson", pos: "OL", throw_pwr: 16, speed: 50, tackle: 75, agility: 55, burst: 69, truck: 91, durability: 92, num: 96},
+{name: "Timothy Mitchell", pos: "OL", throw_pwr: 14, speed: 56, tackle: 88, agility: 52, burst: 65, truck: 85, durability: 91, num: 14},
+{name: "Jason Perez", pos: "OL", throw_pwr: 16, speed: 57, tackle: 82, agility: 63, burst: 59, truck: 86, durability: 92, num: 57},
+{name: "Jeffrey Roberts", pos: "OL", throw_pwr: 17, speed: 52, tackle: 75, agility: 60, burst: 63, truck: 86, durability: 82, num: 92},
+{name: "Ryan Turner", pos: "OL", throw_pwr: 18, speed: 57, tackle: 75, agility: 53, burst: 58, truck: 91, durability: 81, num: 93},
+{name: "Jacob Phillips", pos: "OL", throw_pwr: 19, speed: 56, tackle: 85, agility: 65, burst: 61, truck: 90, durability: 94, num: 66},
+{name: "Gary Campbell", pos: "OL", throw_pwr: 18, speed: 62, tackle: 77, agility: 65, burst: 61, truck: 91, durability: 92, num: 7},
+{name: "Nicholas Parker", pos: "OL", throw_pwr: 12, speed: 52, tackle: 73, agility: 55, burst: 64, truck: 91, durability: 82, num: 94},
+{name: "Eric Evans", pos: "DE", throw_pwr: 18, speed: 70, tackle: 80, agility: 72, burst: 79, truck: 76, durability: 82, num: 85},
+{name: "Stephen Edwards", pos: "DE", throw_pwr: 17, speed: 79, tackle: 80, agility: 74, burst: 78, truck: 83, durability: 84, num: 24},
+{name: "Jonathan Collins", pos: "DT", throw_pwr: 20, speed: 63, tackle: 93, agility: 60, burst: 67, truck: 89, durability: 90, num: 42},
+{name: "Larry Stewart", pos: "DT", throw_pwr: 18, speed: 55, tackle: 91, agility: 57, burst: 73, truck: 87, durability: 82, num: 16},
+{name: "Justin Sanchez", pos: "DL", throw_pwr: 11, speed: 60, tackle: 92, agility: 68, burst: 61, truck: 75, durability: 87, num: 50},
+{name: "Scott Morris", pos: "DL", throw_pwr: 19, speed: 67, tackle: 87, agility: 62, burst: 62, truck: 83, durability: 89, num: 13},
+{name: "Brandon Rogers", pos: "DL", throw_pwr: 14, speed: 75, tackle: 86, agility: 68, burst: 62, truck: 79, durability: 81, num: 91},
+{name: "Frank Reed", pos: "DL", throw_pwr: 17, speed: 65, tackle: 90, agility: 58, burst: 72, truck: 86, durability: 95, num: 97},
+{name: "Benjamin Cook", pos: "MLB", throw_pwr: 17, speed: 80, tackle: 94, agility: 70, burst: 70, truck: 71, durability: 79, num: 68},
+{name: "Samuel Morgan", pos: "OLB", throw_pwr: 16, speed: 70, tackle: 90, agility: 75, burst: 89, truck: 69, durability: 78, num: 27},
+{name: "Gregory Bell", pos: "OLB", throw_pwr: 10, speed: 75, tackle: 81, agility: 70, burst: 83, truck: 65, durability: 76, num: 47},
+{name: "Patrick Murphy", pos: "LB", throw_pwr: 17, speed: 76, tackle: 91, agility: 82, burst: 85, truck: 62, durability: 83, num: 9},
+{name: "Raymond Bailey", pos: "LB", throw_pwr: 14, speed: 75, tackle: 92, agility: 71, burst: 72, truck: 69, durability: 79, num: 26},
+{name: "Jack Rivera", pos: "LB", throw_pwr: 20, speed: 72, tackle: 82, agility: 74, burst: 85, truck: 64, durability: 75, num: 3},
+{name: "Dennis Cooper", pos: "LB", throw_pwr: 14, speed: 80, tackle: 91, agility: 84, burst: 77, truck: 74, durability: 79, num: 67},
+{name: "Jerry Richardson", pos: "CB", throw_pwr: 10, speed: 85, tackle: 81, agility: 90, burst: 91, truck: 44, durability: 79, num: 82},
+{name: "Tyler Cox", pos: "CB", throw_pwr: 10, speed: 85, tackle: 84, agility: 91, burst: 86, truck: 36, durability: 82, num: 62},
+{name: "Aaron Howard", pos: "CB", throw_pwr: 14, speed: 85, tackle: 85, agility: 85, burst: 86, truck: 31, durability: 90, num: 28},
+{name: "Henry Ward", pos: "FS", throw_pwr: 17, speed: 80, tackle: 89, agility: 88, burst: 85, truck: 61, durability: 90, num: 2},
+{name: "Walter Torres", pos: "SS", throw_pwr: 20, speed: 83, tackle: 94, agility: 90, burst: 90, truck: 74, durability: 81, num: 41},
+{name: "Peter Peterson", pos: "DB", throw_pwr: 10, speed: 84, tackle: 80, agility: 85, burst: 80, truck: 64, durability: 76, num: 22},
+{name: "Douglas Gray", pos: "DB", throw_pwr: 17, speed: 80, tackle: 90, agility: 81, burst: 90, truck: 62, durability: 78, num: 90},
+{name: "Zachary Ramirez", pos: "K", throw_pwr: 20, speed: 60, tackle: 16, agility: 62, burst: 57, truck: 15, durability: 80, num: 36},
+{name: "Harold James", pos: "P", throw_pwr: 29, speed: 58, tackle: 15, agility: 73, burst: 56, truck: 18, durability: 83, num: 61},
+{name: "Carl Watson", pos: "LS", throw_pwr: 16, speed: 57, tackle: 62, agility: 55, burst: 58, truck: 51, durability: 70, num: 33},
+{name: "Russell Brooks", pos: "QB", throw_pwr: 92, speed: 66, tackle: 29, agility: 79, burst: 70, truck: 21, durability: 76, num: 40},
+{name: "Philip Kelly", pos: "RB", throw_pwr: 11, speed: 81, tackle: 31, agility: 87, burst: 83, truck: 67, durability: 86, num: 4},
+{name: "Nathan James", pos: "WR", throw_pwr: 11, speed: 92, tackle: 37, agility: 86, burst: 93, truck: 32, durability: 81, num: 38},
+{name: "Ethan Moore", pos: "OL", throw_pwr: 16, speed: 56, tackle: 89, agility: 51, burst: 70, truck: 94, durability: 88, num: 45},
+{name: "Adam Bennett", pos: "DL", throw_pwr: 10, speed: 60, tackle: 91, agility: 70, burst: 62, truck: 80, durability: 87, num: 10},
+{name: "Shawn Turner", pos: "LB", throw_pwr: 16, speed: 77, tackle: 81, agility: 85, burst: 75, truck: 65, durability: 82, num: 89},
+{name: "Cameron Scott", pos: "CB", throw_pwr: 15, speed: 85, tackle: 85, agility: 88, burst: 92, truck: 30, durability: 78, num: 72},
+{name: "Logan Bell", pos: "S", throw_pwr: 18, speed: 89, tackle: 80, agility: 84, burst: 89, truck: 61, durability: 81, num: 98},
+{name: "Connor Hughes", pos: "WR", throw_pwr: 10, speed: 87, tackle: 26, agility: 91, burst: 88, truck: 40, durability: 89, num: 75},
+{name: "Travis Hill", pos: "TE", throw_pwr: 20, speed: 83, tackle: 65, agility: 83, burst: 70, truck: 80, durability: 75, num: 19},
+];
+
+// Store in global team map as template
+if (!variable_global_exists("teams")) {
+    global.teams = ds_map_create();
+}
+global.teams[? "TEMPLATE"] = team;
+
+
+==========================================================================================
+SCRIPT: scr_show_roster_editor
+File: scripts\scr_show_roster_editor\scr_show_roster_editor.gml
+------------------------------------------------------------------------------------------
+function scr_show_roster_editor(roster_array) {
+    global.roster_editor_data = array_create(array_length(roster_array), 0);
+    array_copy(global.roster_editor_data, 0, roster_array, 0, array_length(roster_array));
+}
+
+
+==========================================================================================
+SCRIPT: scr_team_boot
+File: scripts\scr_team_boot\scr_team_boot.gml
+------------------------------------------------------------------------------------------
+function scr_team_boot() {
+    // Clear current teams
+    if (variable_global_exists("teams") && ds_exists(global.teams, ds_type_map)) {
+        ds_map_destroy(global.teams);
+    }
+    global.teams = ds_map_create();
+    // Find JSON files in the save-area teams folder
+    var base_dir = game_save_id + "teams/";
+    if (!directory_exists(base_dir)) directory_create(base_dir);
+    var pattern = base_dir + "*.json";
+    var fname   = file_find_first(pattern, 0);
+    while (fname != "") {
+        scr_team_load(base_dir + fname);
+        fname = file_find_next();
+    }
+    file_find_close();
+    // Build the team list for menus
+    global.team_list = [];
+    var key = ds_map_find_first(global.teams);
+    while (key != undefined) {
+        array_push(global.team_list, key);
+        key = ds_map_find_next(global.teams, key);
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_team_create_new
+File: scripts\scr_team_create_new\scr_team_create_new.gml
+------------------------------------------------------------------------------------------
+/// scr_team_create_new(name, city, abbr, palette_key)
+/// Returns a fully-formed team struct and persists it.
+function scr_team_create_new(_name, _city, _abbr, _pal_key)
+{
+    // palette: use existing map (falls back to Default)
+    if (!variable_global_exists("team_palettes")) scr_palette_init("Default");
+    var pal = ds_map_exists(global.team_palettes, _pal_key)
+            ? global.team_palettes[? _pal_key]
+            : global.team_palettes[? "Default"];
+
+    var team = {
+        team_name : string(_name),
+        city      : string(_city),
+        team_abbr : string(_abbr),
+        logo      : 0,
+        colours   : pal,
+        roster    : scr_make_random_roster(53) // 53-man
+    };
+
+    // Register in memory
+    if (!variable_global_exists("teams")) global.teams = ds_map_create();
+    ds_map_replace(global.teams, team.team_name, team);
+
+    // Persist immediately
+    scr_team_save(team);
+
+    // Rebuild menus/list if needed
+    scr_team_load_all();
+
+    return team;
+}
+
+
+==========================================================================================
+SCRIPT: scr_team_load
+File: scripts\scr_team_load\scr_team_load.gml
+------------------------------------------------------------------------------------------
+/// scr_team_load(fname)
+/// Loads one JSON file, normalizes portraits & palette, registers team in globals.
+function scr_team_load(fname)
+{
+    // Ensure global.teams exists
+    if (!variable_global_exists("teams") || !ds_exists(global.teams, ds_type_map))
+        global.teams = ds_map_create();
+
+    // Read file into string
+    if (!file_exists(fname)) {
+        show_debug_message("scr_team_load – file not found: " + string(fname));
+        return;
+    }
+    var fh  = file_text_open_read(fname);
+    var raw = file_text_read_string(fh);
+    file_text_close(fh);
+
+    // Parse JSON (catch errors so bad files don't crash startup)
+    var data;
+    try { data = json_parse(raw); } catch (e) {
+        show_debug_message("scr_team_load – JSON error in " + string(fname));
+        return;
+    }
+    if (!is_struct(data)) return;
+
+    // --- Ensure portrait palettes exist (safe if already set)
+    if (!variable_global_exists("PAL_SKIN"))  scr_portrait_palettes_init();
+
+    // --- Normalize roster: guarantee portraits on each player
+    if (variable_struct_exists(data, "roster") && is_array(data.roster)) {
+        for (var i = 0; i < array_length(data.roster); i++) {
+            var p = data.roster[i];
+            if (is_struct(p)) {
+                if (!variable_struct_exists(p, "portrait") || is_undefined(p.portrait)) {
+                    p.portrait = scr_portrait_random();
+                } else {
+                    p.portrait = scr_portrait_ensure(p.portrait);
+                }
+                data.roster[i] = p;
+            }
+        }
+    }
+
+    // --- Determine team name
+    var tname = variable_struct_exists(data, "team_name") ? string(data.team_name) : "Unnamed";
+
+    // --- Ensure colours exist (fallback to Default)
+if (!variable_struct_exists(data, "colours") || !is_array(data.colours) || array_length(data.colours) == 0) {
+    // Make sure palette map exists; scr_palette_init builds it if missing
+    if (!variable_global_exists("team_palettes")) {
+        scr_palette_init("Default");
+    }
+    data.colours = ds_map_exists(global.team_palettes,"Default")
+                 ? global.team_palettes[? "Default"]
+                 : [ $FFFFFF ]; // ultra-safe 1 color fallback
+}
+
+    // --- Add/replace team in global.teams
+    ds_map_replace(global.teams, tname, data);
+
+    // --- Register team palette
+    if (!variable_global_exists("team_palettes"))
+        global.team_palettes = ds_map_create();
+
+    var pal_copy = array_create(array_length(data.colours), 0);
+    array_copy(pal_copy, 0, data.colours, 0, array_length(data.colours));
+    global.team_palettes[? tname] = pal_copy;
+
+    // --- Register info (name, city, abbr, logo)
+    if (!variable_global_exists("team_info"))
+        global.team_info = ds_map_create();
+
+    var city = variable_struct_exists(data, "city") ? string(data.city) : "";
+    var abbr = variable_struct_exists(data, "team_abbr") ? string(data.team_abbr) 
+             : (variable_struct_exists(data, "abbr") ? string(data.abbr) : "");
+    var logo = variable_struct_exists(data, "logo") ? real(data.logo) : 0;
+
+    global.team_info[? tname] = [tname, city, abbr, logo];
+
+    show_debug_message("scr_team_load – loaded \"" + tname + "\"");
+}
+
+
+==========================================================================================
+SCRIPT: scr_team_load_all
+File: scripts\scr_team_load_all\scr_team_load_all.gml
+------------------------------------------------------------------------------------------
+/// scr_team_load_all()
+/// Clears globals, loads every .json in %LOCALAPPDATA%\ForAgentFootball\teams\
+function scr_team_load_all()
+{
+    // Unload old
+    if (variable_global_exists("teams") && ds_exists(global.teams, ds_type_map))
+        ds_map_destroy(global.teams);
+    global.teams     = ds_map_create();
+    global.team_list = [];
+
+    // Load new
+    var base_dir = game_save_id + "teams/";
+    if (!directory_exists(base_dir)) directory_create(base_dir);
+
+    var fn = file_find_first(base_dir + "*.json", 0);
+    while (fn != "") {
+        scr_team_load(base_dir + fn);
+        fn = file_find_next();
+    }
+    file_find_close();
+
+    // Build list
+    var k = ds_map_find_first(global.teams);
+    while (k != undefined) { array_push(global.team_list, k); k = ds_map_find_next(global.teams, k); }
+    show_debug_message("scr_team_load_all – loaded " + string(array_length(global.team_list)) + " teams");
+}
+
+
+==========================================================================================
+SCRIPT: scr_team_save
+File: scripts\scr_team_save\scr_team_save.gml
+------------------------------------------------------------------------------------------
+/// scr_team_save(team)
+/// Saves a team struct as JSON into %LOCALAPPDATA%\ForAgentFootball\teams\
+function scr_team_save(team)
+{
+    if (!is_struct(team) || !variable_struct_exists(team, "team_name")) return false;
+    var name     = string(team.team_name);
+    var base_dir = game_save_id + "teams/";
+    if (!directory_exists(base_dir)) directory_create(base_dir);
+
+    // Copy colours as decimal integers (hex -> real)
+    if (variable_struct_exists(team, "colours")) {
+        var col_dec = array_create(array_length(team.colours), 0);
+        for (var i = 0; i < array_length(team.colours); ++i) {
+            col_dec[i] = team.colours[i] & 0xFFFFFF; // strip to 24-bit int
+        }
+        team.colours = col_dec;
+    }
+
+    // Write JSON
+    string_save(base_dir + name + ".json", json_stringify(team, true));
+    show_debug_message("scr_team_save – saved \"" + name + "\" to " + base_dir);
+
+    // Reload list
+    scr_team_load_all();
+    return true;
+}
+
+/// ----------------------------------------------------------
+/// Additional utility functions for rosters and team control.
+
+/// scr_roster_save(team_name, roster)
+/// Save a roster array or struct to the rosters folder. The file will be named <team_name>_roster.json.
+function scr_roster_save(team_name, roster) {
+    if (team_name == "" || roster == undefined) return false;
+    var base_dir = game_save_id + "rosters/";
+    if (!directory_exists(base_dir)) {
+        directory_create(base_dir);
+    }
+    var fname = base_dir + string(team_name) + "_roster.json";
+    string_save(fname, json_encode(roster, true));
+    show_debug_message("scr_roster_save – Saved roster for " + team_name);
+    return true;
+}
+
+/// scr_roster_load(team_name)
+/// Load a roster for the given team name from the rosters folder. Returns the parsed JSON struct or undefined if not found.
+function scr_roster_load(team_name) {
+    var base_dir = game_save_id + "rosters/";
+    var fname = base_dir + string(team_name) + "_roster.json";
+    if (file_exists(fname)) {
+        var fh  = file_text_open_read(fname);
+        var raw = file_text_read_string(fh);
+        file_text_close(fh);
+        return json_parse(raw);
+    }
+    return undefined;
+}
+
+/// scr_assign_team_control(team_name, controller)
+/// Assigns a team to a controller: 0 = CPU, 1 = player one, 2 = player two.
+function scr_assign_team_control(team_name, controller) {
+    // ensure the team_control map exists
+    if (!variable_global_exists("team_control") || !ds_exists(global.team_control, ds_type_map)) {
+        global.team_control = ds_map_create();
+    }
+    ds_map_replace(global.team_control, team_name, controller);
+}
+
+/// scr_get_team_control(team_name)
+/// Retrieves the controller assignment for a team. Returns 0 if none exists.
+function scr_get_team_control(team_name) {
+    // return the controller assignment if the map exists
+    if (variable_global_exists("team_control") && ds_exists(global.team_control, ds_type_map)) {
+        if (ds_map_exists(global.team_control, team_name)) {
+            return global.team_control[? team_name];
+        }
+    }
+    return 0;
+}
+
+
+==========================================================================================
+SCRIPT: scr_team_unload
+File: scripts\scr_team_unload\scr_team_unload.gml
+------------------------------------------------------------------------------------------
+/// scr_team_unload()
+/// Destroys the global.teams map and clears team_list.
+function scr_team_unload() {
+    if (variable_global_exists("teams") && ds_exists(global.teams, ds_type_map)) {
+        ds_map_destroy(global.teams);
+        variable_global_unset("teams");
+    }
+    if (variable_global_exists("team_list")) {
+        variable_global_unset("team_list");
+    }
+}
+
+
+==========================================================================================
+SCRIPT: scr_team_unload_all
+File: scripts\scr_team_unload_all\scr_team_unload_all.gml
+------------------------------------------------------------------------------------------
+/// scr_team_unload_all()
+/// Destroys any existing globals before rebuilding.
+function scr_team_unload_all() {
+    // If the global.teams map exists and is a ds_map, destroy it.
+    if (variable_global_exists("teams") && ds_exists(global.teams, ds_type_map)) {
+        ds_map_destroy(global.teams);
+    }
+
+    // Clear out the variables without using variable_global_unset()
+    global.teams = undefined;
+    global.team_list = undefined;
+}
+
+
+==========================================================================================
+SCRIPT: scr_teaminfo_set
+File: scripts\scr_teaminfo_set\scr_teaminfo_set.gml
+------------------------------------------------------------------------------------------
+/// scr_teaminfo_set(team, name, city, abbr, logoFrame)
+/// Stores/overwrites the info array for a team in global.team_info.
+
+function scr_teaminfo_set(_team, _name, _city, _abbr, _logo_frame)
+{
+    if (!variable_global_exists("team_info"))
+        global.team_info = ds_map_create();
+
+    global.team_info[? _team] = [_name, _city, _abbr, _logo_frame];
+}
+
+
+==========================================================================================
+SCRIPT: scr_toggle_fullscreen
+File: scripts\scr_toggle_fullscreen\scr_toggle_fullscreen.gml
+------------------------------------------------------------------------------------------
+/// scr_toggle_fullscreen()
+
+// Toggle fullscreen
+var new_state = !window_get_fullscreen();
+window_set_fullscreen(new_state);
+
+// Set a flag to refresh the palette surface in the controller
+global.palette_needs_refresh = true;
+
+
+==========================================================================================
+SCRIPT: scr_write_string
+File: scripts\scr_write_string\scr_write_string.gml
+------------------------------------------------------------------------------------------
+/// scr_write_string( path , txt )  ▸ writes whole file (over-write)
+function scr_write_string(p, t)
+{
+    var fh = file_text_open_write(p);
+    file_text_write_string(fh, t);
+    file_text_close(fh);
+}
+
+
+==========================================================================================
+SCRIPT: scr_write_text
+File: scripts\scr_write_text\scr_write_text.gml
+------------------------------------------------------------------------------------------
+/// scr_write_text(path, text)
+/*
+    Writes a string to disk inside the sandbox.
+    Returns true on success, false on failure.
+*/
+function scr_write_text(path, text)
+{
+    var file = file_text_open_write(path);
+    if (file == -1)
+    {
+        show_debug_message("scr_write_text — COULDN'T OPEN: " + path);
+        return false;
+    }
+
+    file_text_write_string(file, text);
+    file_text_close(file);
+    return true;
+}
+
+
+==========================================================================================
+SCRIPT: string_load
+File: scripts\string_load\string_load.gml
+------------------------------------------------------------------------------------------
+/// string_load( path ) → contents
+///
+/// Reads the whole text-file at <path> into a single string.
+/// Returns "" if the file cannot be opened.
+
+function string_load(path)
+{
+    if (!file_exists(path))
+        return "";
+
+    var fh = file_text_open_read(path);
+    var out = "";
+    while (!file_text_eof(fh))
+    {
+        out += file_text_read_string(fh);
+        file_text_readln(fh);            // consume line-ending
+    }
+    file_text_close(fh);
+    return out;
+}
+
+
+==========================================================================================
+SCRIPT: string_save
+File: scripts\string_save\string_save.gml
+------------------------------------------------------------------------------------------
+/// string_save( path , str )
+///
+/// Writes <str> out to <path>, overwriting if it exists.
+
+function string_save(path, str)
+{
+    var fh = file_text_open_write(path);
+    file_text_write_string(fh, str);
+    file_text_close(fh);
+}
+
+
+==========================================================================================
+SCRIPT: throw_to_target
+File: scripts\throw_to_target\throw_to_target.gml
+------------------------------------------------------------------------------------------
+/// @function throw_to_target(qb_x, qb_y, wr_inst, pow, pass_type)
+/// @desc Predictive pass with distance-scaled arc & lead.
+///       2025-06-22 21:45 CDT
+///
+/// Arguments:
+/// 0  qb_x        – X position where ball leaves QB’s hand
+/// 1  qb_y        – Y position where ball leaves QB’s hand
+/// 2  wr_inst     – receiver instance
+/// 3  pow         – raw charged power (≥150 enforced)
+/// 4  pass_type   – "lob" or "bullet"
+
+function throw_to_target(qb_x, qb_y, wr_inst, pow, pass_type)
+{
+    if (!instance_exists(wr_inst)) exit;
+
+    /* ── clamp minimum power ── */
+    if (pow < 150) pow = 150;
+
+    /* ── receiver velocity (one-frame sample) ── */
+    var wr_vx = 0;
+    var wr_vy = 0;
+
+    if (variable_instance_exists(wr_inst, "prev_x"))
+    {
+        wr_vx = wr_inst.x - wr_inst.prev_x;
+        wr_vy = wr_inst.y - wr_inst.prev_y;
+    }
+
+    /* ── derive ball speed from power ── */
+    var base_spd = (pass_type == "lob") ? 6 : 9;
+    var ball_spd = clamp(pow / 25, base_spd, 18);   // 6 - 18 px/step
+
+    /* ── distance & flight-time estimate ── */
+    var dist     = point_distance(qb_x, qb_y, wr_inst.x, wr_inst.y);
+    var time_est = clamp(dist / ball_spd, 6, 40);   // 0.1–0.67 s
+
+    /* ── dynamic lead: short = small, long = large ── */
+    var lead_fac = lerp(0.30, 0.75, time_est / 40.0);
+    var lead_x   = wr_inst.x + wr_vx * lead_fac * time_est;
+    var lead_y   = wr_inst.y + wr_vy * lead_fac * time_est;
+
+    /* ── cap to max range (2200 px) ── */
+    var max_rng  = 2200;
+    var act_dist = point_distance(qb_x, qb_y, lead_x, lead_y);
+
+    if (act_dist > max_rng)
+    {
+        var dir = point_direction(qb_x, qb_y, lead_x, lead_y);
+        lead_x  = qb_x + lengthdir_x(max_rng, dir);
+        lead_y  = qb_y + lengthdir_y(max_rng, dir);
+        act_dist= max_rng;
+        time_est= act_dist / ball_spd;
+    }
+
+    /* ── final heading ── */
+    var dir_final = point_direction(qb_x, qb_y, lead_x, lead_y);
+
+    /* ── configure the football ── */
+    with (objFootball)
+    {
+        /* basic state */
+        attached_to   = noone;
+        play_active   = true;
+        visible       = true;
+
+        /* starting position */
+        x = qb_x;
+        y = qb_y;
+
+        /* motion */
+        direction     = dir_final;
+        speed         = ball_spd;
+
+        /* prediction target (for debug ring) */
+        target_x      = lead_x;
+        target_y      = lead_y;
+
+        /* arc visuals: higher for longer throws */
+        visual_arc_total = time_est;
+        visual_arc_peak  = lerp(14, 30, time_est / 40.0);
+        visual_arc_time  = 0;
+    }
+}
+
+
+==========================================================================================
+SCRIPT: UtilityScripts
+File: scripts\UtilityScripts\UtilityScripts.gml
+------------------------------------------------------------------------------------------
+/// scr_array_delete_value(arr, val)  → returns trimmed copy
+function scr_array_delete_value(arr, val)
+{
+    var out = [];
+    for (var i = 0; i < array_length(arr); ++i)
+        if (arr[i] != val) array_push(out, arr[i]);
+    return out;
+}
+
+/// scr_safe_ds_map_keys(dsmap) → array of keys  (empty if ds is bad)
+function scr_safe_ds_map_keys(dsmap)
+{
+    if (!ds_exists(dsmap, ds_type_map)) return [];
+    var keys = [];
+    var k = ds_map_find_first(dsmap);
+    while (!is_undefined(k))
+    {
+        array_push(keys, k);
+        k = ds_map_find_next(dsmap, k);
+    }
+    return keys;
+}
+
+
+/// scr_input_hint()
+//
+// Shows context-sensitive controls at the top-centre of the screen.
+// Called from Draw GUI.
+function scr_input_hint()
+{
+var pad_connected = gamepad_is_connected(0);
+
+draw_set_font(font1);
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_set_color(c_silver);
+
+var msg = "";
+
+if (pad_connected)
+{
+    msg = "LS ↑/↓  –  change team   |   LS ←/→  –  swap sides   |   START – Ready";
+}
+else
+{
+    msg = "W/S – change team   |   A/D – swap sides   |   ENTER – Ready";
+}
+
+draw_text(display_get_gui_width() * 0.5, 16, msg);
+}
+
+##########################################################################################
+SPRITES (names only)
+##########################################################################################

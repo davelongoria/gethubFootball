@@ -19,7 +19,7 @@ team.colours = [
 
 // Default full roster: 53 players + 10 alternates
 team.roster = [
-{name: "David Longoria", pos: "QB", throw_pwr: 91, speed: 74, tackle: 27, agility: 72, burst: 62, truck: 22, durability: 75, num: 81},
+{name: "David Long", pos: "QB", throw_pwr: 91, speed: 74, tackle: 27, agility: 72, burst: 62, truck: 22, durability: 75, num: 81},
 {name: "Michael Johnson", pos: "QB", throw_pwr: 95, speed: 66, tackle: 19, agility: 65, burst: 69, truck: 14, durability: 84, num: 6},
 {name: "David Carter", pos: "QB", throw_pwr: 89, speed: 66, tackle: 22, agility: 64, burst: 60, truck: 10, durability: 84, num: 56},
 {name: "Robert Brown", pos: "RB", throw_pwr: 14, speed: 90, tackle: 32, agility: 86, burst: 85, truck: 54, durability: 85, num: 5},

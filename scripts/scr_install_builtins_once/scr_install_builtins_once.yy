@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_palette_init_old",
+  "%Name":"scr_install_builtins_once",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_palette_init_old",
+  "name":"scr_install_builtins_once",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

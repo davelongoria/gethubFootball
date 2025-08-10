@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_roster_apply_grid_to_models",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_roster_apply_grid_to_models",
+  "parent":{
+    "name":"script",
+    "path":"folders/Objects/Palette/roster/script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

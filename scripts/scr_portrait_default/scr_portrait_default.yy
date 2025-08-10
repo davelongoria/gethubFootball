@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_portrait_default",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_portrait_default",
+  "parent":{
+    "name":"script",
+    "path":"folders/Objects/Palette/roster/script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

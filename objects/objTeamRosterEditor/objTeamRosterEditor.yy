@@ -10,8 +10,8 @@
   "name":"objTeamRosterEditor",
   "overriddenProperties":[],
   "parent":{
-    "name":"roster",
-    "path":"folders/Objects/Palette/roster.yy",
+    "name":"script",
+    "path":"folders/Objects/Palette/roster/script.yy",
   },
   "parentObjectId":null,
   "persistent":false,

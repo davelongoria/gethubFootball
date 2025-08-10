@@ -1,6 +1,12 @@
 /// rmBoot → Create Event
-scr_team_load_all();   // use the save-area loader
+scr_initialize_folders();   // makes %LOCALAPPDATA%\<game>\teams, rosters, etc.
+scr_install_builtins_once(); // (new) copy bundled teams on first run
+scr_team_load_all();        // read every teams/*.json into global.teams + lists
+
 scr_seed_teams(); // Ensure TEMPLATE team is initialized at startup
+// init only
+if (script_exists(scr_portrait_palettes_init)) scr_portrait_palettes_init();
+if (!variable_global_exists("input_eat_frames")) global.input_eat_frames = 0;
 
 // Ensure lists/maps
 if (!variable_global_exists("logo_sprites")) global.logo_sprites = ds_list_create();

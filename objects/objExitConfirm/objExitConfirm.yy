@@ -10,8 +10,8 @@
   "name":"objExitConfirm",
   "overriddenProperties":[],
   "parent":{
-    "name":"roster",
-    "path":"folders/Objects/Palette/roster.yy",
+    "name":"object",
+    "path":"folders/Objects/Palette/roster/object.yy",
   },
   "parentObjectId":null,
   "persistent":false,

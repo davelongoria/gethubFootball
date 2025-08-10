@@ -1,129 +1,60 @@
-//////////////////////////////////////////////////////////////////////////////
-// objTeamRosterEditor – Create Event  (FULL, UPDATED)
-//////////////////////////////////////////////////////////////////////////////
+/// @desc objTeamRosterEditor — Create
+depth = -100002; // draw after most things that accidentally use non-GUI draw
 
-depth = -10001;
+// ---------- Editor core ----------
+selected_row    = 0;
+selected_col    = 0;
+scroll_offset   = 0;
+row_height      = 28;
+top_margin      = 120;
 
-//--------------------------------------------------
-// 1. Default globals for header strings
-//--------------------------------------------------
-if (!variable_global_exists("team_name")) global.team_name = "DEFAULT";
-if (!variable_global_exists("team_city")) global.team_city = "City";
-if (!variable_global_exists("team_abbr")) global.team_abbr = "DEF";
+// ---------- Header / team strings ----------
+team_name = (variable_global_exists("team_name") && is_string(global.team_name)) ? global.team_name : "Generics";
+team_city = (variable_global_exists("team_city") && is_string(global.team_city)) ? global.team_city : "Metro City";
+team_abbr = (variable_global_exists("team_abbr") && is_string(global.team_abbr)) ? global.team_abbr : "GEN";
 
-team_name  = global.team_name;
-team_city  = global.team_city;
-team_abbr  = global.team_abbr;
-
-//--------------------------------------------------
-// 2. Overlay flag
-//--------------------------------------------------
-if (!variable_global_exists("ui_overlay_active"))
-    global.ui_overlay_active = false;
-
-//--------------------------------------------------
-// 3. Layout & navigation vars
-//--------------------------------------------------
-grid_offset_y = 200;
-scroll_col    = 0;
-
-row_height    = 40;
-col_positions = [100, 400, 600, 720, 840, 960];
-scroll_y      = 0;
-
-active_row  = 0;
-active_col  = 0;
-is_editing  = false;
-is_dragging = false;
-
-//--------------------------------------------------
-// 4. Ensure data structures exist
-//--------------------------------------------------
-if (!variable_global_exists("team_info")) global.team_info = ds_map_create();
-if (!variable_global_exists("teams"))     global.teams     = ds_map_create();
-if (!variable_global_exists("roster_editor_data"))
-    global.roster_editor_data = [];
-
-//--------------------------------------------------
-// 5. Determine team to edit
-//--------------------------------------------------
-var teamname = (variable_global_exists("team_to_edit"))
-             ? global.team_to_edit
-             : "TEMPLATE";
-
-//--------------------------------------------------
-// 6. Build grid_data array
-//--------------------------------------------------
+// ---------- Build grid_data from session ----------
 grid_data = [];
 
-// ----- Header row -----
-var info_arr;
-if (ds_map_exists(global.team_info, teamname))
-    info_arr = global.team_info[? teamname];
-else {
-    info_arr = ["", "", "", 0];
-    global.team_info[? teamname] = info_arr;
+function _mk_player_row(idx, ply) {
+    var f = [
+        string(ply.name),
+        string(ply.pos),
+        string(ply.speed),
+        string(ply.agility),
+        string(ply.tackle),
+        string(ply.durability)
+    ];
+    return { type: "player", index: idx, fields: f };
 }
 
-array_push(grid_data,
-    { type:"info", group:"TEAM",
-      fields:[ info_arr[0], info_arr[1], info_arr[2] ] }
-);
-
-// ----- Player rows grouped by position -----
-var position_groups = ["QB","RB","FB","WR","TE",
-                       "OL","DL","LB","CB","S","K","P","LS"];
-
-for (var g = 0; g < array_length(position_groups); g++)
-{
-    var group = position_groups[g];
-
-    for (var i = 0; i < array_length(global.roster_editor_data); i++)
-    {
-        var p = global.roster_editor_data[i];
-
-        // ---------- SAFEGUARD ----------
-        if (!is_struct(p)) {
-            // convert legacy / bad entry to minimal struct
-            p = {
-                name:"UNKNOWN",
-                pos :"UNK",
-                speed:0,
-                agility:0,
-                tackle:0,
-                durability:0
-            };
-            global.roster_editor_data[i] = p;   // store back
-        }
-        else if (!variable_struct_exists(p,"pos")) {
-            p.pos = "UNK";
-        }
-
-        // --------- grouping logic ---------
-        var match = false;
-        if (group == "S")        match = (p.pos == "FS" || p.pos == "SS");
-        else if (group == "DL")  match = (p.pos == "DT" || p.pos == "DE");
-        else if (group == "OL")  match = (string_pos("OL", p.pos) > 0);
-        else                     match = (p.pos == group);
-
-        if (match)
-        {
-            array_push(grid_data,
-                { type:"player", group:group, index:i,
-                  fields:[
-                    p.name,
-                    p.pos,
-                    string(p.speed),
-                    string(p.agility),
-                    string(p.tackle),
-                    string(p.durability)
-                  ]
-                });
-        }
-    }
+if (!variable_global_exists("roster_editor_data") || !is_array(global.roster_editor_data)) {
+    global.roster_editor_data = [];
 }
 
-//--------------------------------------------------
-// 7. Flag overlay active
-//--------------------------------------------------
+// Header (row 0)
+array_push(grid_data, { type: "header", fields: [team_name, team_city, team_abbr] });
+
+// Players
+for (var i = 0; i < array_length(global.roster_editor_data); i++) {
+    var p = global.roster_editor_data[i];
+    if (is_struct(p)) array_push(grid_data, _mk_player_row(i, p));
+}
+
+// ---------- Virtual keyboard state ----------
+keyboard_open       = false;
+keyboard_finished   = false;
+keyboard_cancelled  = false;
+keyboard_text       = "";
+keyboard_target_row = -1;
+keyboard_target_col = -1;
+
+// ---------- Edit mode ----------
+is_editing = false;
+
+// ---------- Flags ----------
 global.roster_editor_active = true;
+
+// ---------- Column labels ----------
+col_labels = ["NAME","POS","SPD","AGI","TCK","DUR"];
+show_debug_message("Editor grid rows = " + string(array_length(grid_data)));

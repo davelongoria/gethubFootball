@@ -1,6 +1,7 @@
 /// objExitConfirm - Create Event
 depth = -10002;
 /// objExitConfirm - Create Event
+save_before_exit = false;
 
 selected_option = 0; // 0 = Yes, 1 = No
 question_text = "Would you like to save before exiting?";

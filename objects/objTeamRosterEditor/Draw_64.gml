@@ -1,93 +1,117 @@
-/// objTeamRosterEditor - Draw GUI Event
+/// @desc objTeamRosterEditor — Draw GUI
 
-// Skip Drawing if UI Overlay is Active
-if (global.ui_overlay_active) exit;
-
-var start_y = grid_offset_y;
-var col_offset = scroll_col;
-
-// Draw Player Portrait (Top Left)
-draw_set_font(fntRosterLarge);
+// ---------- SAFETY: reset render state & choose a font ----------
+shader_reset();
+gpu_set_blendmode(bm_normal);
+draw_set_alpha(1);
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_sprite(sprPlayerPortrait, 0, 40, 40);
 
-// Draw Yellow Outline if Portrait is Selected
-if (active_col == -1) {
-    var spr_w = sprite_get_width(sprPlayerPortrait);
-    var spr_h = sprite_get_height(sprPlayerPortrait);
+// Prefer your resource font; fall back to global.sprite font; else engine default
+var f = asset_get_index("fntRosterLarge");
+if (f != -1) {
+    draw_set_font(f);
+} else if (variable_global_exists("font") && is_real(global.font)) {
+    draw_set_font(global.font);
+} else {
+    draw_set_font(-1);
+}
+
+var GW = display_get_gui_width();
+var GH = display_get_gui_height();
+
+// ---------- Soft-dim background (handled by editor; no separate dimmer) ----------
+draw_set_alpha(0.35);
+draw_set_color(c_black);
+draw_rectangle(0, 0, GW, GH, false);
+draw_set_alpha(1);
+
+// ---------- Title ----------
+draw_set_color(c_white);
+draw_text(24, 20, "TEAM + ROSTER EDITOR");
+
+// ---------- Header block (team info) ----------
+if (is_array(grid_data) && array_length(grid_data) > 0 && is_struct(grid_data[0]) && is_array(grid_data[0].fields)) {
+    draw_text(24, 60,  "Team Name:");
+    draw_text(24, 84,  "City:");
+    draw_text(24, 108, "Abbr:");
+
+    var hdr = grid_data[0].fields;
+    draw_text(180, 60,  string(hdr[0]));
+    draw_text(180, 84,  string(hdr[1]));
+    draw_text(180, 108, string(hdr[2]));
+
+    // Highlight header selection
+    if (selected_row == 0) {
+        var hx = 176 + selected_col * 160;
+        var hy = 60 + selected_col * 24; // 0→60, 1→84, 2→108
+        draw_set_color(c_yellow);
+        draw_rectangle(hx - 6, hy - 2, hx + 300, hy + 18, true);
+        draw_set_color(c_black);
+        var hdr_text = string(hdr[selected_col]);
+        draw_text(hx, hy, hdr_text);
+        draw_set_color(c_white);
+    }
+} else {
     draw_set_color(c_yellow);
-    draw_line(40 - 2, 40 - 2, 40 + spr_w + 2, 40 - 2);
-    draw_line(40 - 2, 40 + spr_h + 2, 40 + spr_w + 2, 40 + spr_h + 2);
-    draw_line(40 - 2, 40 - 2, 40 - 2, 40 + spr_h + 2);
-    draw_line(40 + spr_w + 2, 40 - 2, 40 + spr_w + 2, 40 + spr_h + 2);
+    draw_text(24, 60, "⚠ grid_data header missing");
+    // early out prevents indexing errors
+    exit;
 }
 
-// Draw Player Info Section to the Right of Portrait
-var info_x_start = 40 + sprite_get_width(sprPlayerPortrait) + 400;
-var info_y = 40;
-var info_labels = ["TEAM NAME:", "CITY:", "ABBR:", "College:", "Yrs Pro:", "Ht/Wt:", "Age:"];
-var info_values = [team_name, team_city, team_abbr, "N/A", "N/A", "N/A", "N/A"];
-
-for (var i = 0; i < array_length(info_labels); i++) {
-    var is_active_field = (active_row == -1 - i && active_col != -1);
-    draw_set_color(is_active_field ? c_yellow : c_white);
-    draw_text(info_x_start, info_y + i * 40, info_labels[i] + " " + info_values[i]);
+// ---------- Column labels ----------
+var labels_x = 24;
+var labels_y = top_margin - 24;
+for (var c = 0; c < array_length(col_labels); c++) {
+    draw_text(labels_x + c * 150, labels_y, col_labels[c]);
 }
 
-// Adjust Static Field Labels Position
-var field_label_y = grid_offset_y + 200;
-var labels = ["POS", "SPD", "STR", "AGI", "POW", "DUR"];
-for (var col = 0; col < array_length(labels); col++) {
-    draw_set_color(c_white);
-    draw_text(col_positions[col], field_label_y, labels[col]);
-}
+// ---------- Player rows ----------
+var start_i       = 1 + scroll_offset; // skip header (index 0)
+var visible_rows  = floor((GH - top_margin) / row_height);
+var end_i         = min(array_length(grid_data) - 1, start_i + visible_rows - 1);
 
-var grid_visible_rows = floor((display_get_gui_height() - field_label_y - 80) / row_height);
-var base_row = clamp(active_row, 0, array_length(grid_data) - 1);
-
-// Adjust scrolling so active_row stays centered
-var visual_row_y = field_label_y + row_height * (grid_visible_rows div 2);
-var scroll_offset = (base_row * row_height) - (visual_row_y - (field_label_y + row_height));
-
-var row_y = field_label_y + row_height;
-
-for (var i = 0; i < array_length(grid_data); i++) {
-    var y_pos = row_y - scroll_offset;
-    if (y_pos < field_label_y + row_height || y_pos > display_get_gui_height() - 40) {
-        row_y += row_height;
-        continue;
-    }
-
-    var is_active_row = (i == active_row);
+var row_y = top_margin;
+for (var i = start_i; i <= end_i; i++) {
     var row = grid_data[i];
-
-    if (i == 0 && row.type == "info") {
-        for (var col = 0; col < 3; col++) {
-            var is_active_field = is_active_row && (col == active_col);
-            draw_set_color(is_active_field ? c_yellow : c_white);
-            draw_text(col_positions[col], y_pos, row.fields[col]);
-        }
+    if (!is_struct(row) || row.type != "player") {
         row_y += row_height;
         continue;
     }
 
-    if (row.type == "player") {
-        var scale_factor = (is_dragging && is_active_row) ? 1.1 : 1;
+    // selection highlight line
+    if (i == selected_row) {
+        draw_set_color(make_color_rgb(48,48,72));
+        draw_rectangle(20, row_y - 4, GW - 20, row_y + row_height - 4, false);
+        draw_set_color(c_white);
+    }
 
-        for (var col = 0; col < 6; col++) {
-            var actual_col = col + col_offset;
-            if (actual_col >= array_length(row.fields)) break;
-            var is_active_field = is_active_row && (col == active_col);
-            draw_set_color(is_active_field ? c_yellow : c_white);
-            draw_text_transformed(col_positions[col], y_pos, row.fields[actual_col], scale_factor, scale_factor, 0);
+    // draw the row fields
+    var fields = row.fields;
+    if (!is_array(fields)) { row_y += row_height; continue; }
+
+    for (var cc = 0; cc < array_length(fields); cc++) {
+        var txt = string(fields[cc]);
+        var cx  = 24 + cc * 150;
+
+        if (i == selected_row && cc == selected_col) {
+            draw_set_color(c_yellow);
+            draw_rectangle(cx - 6, row_y - 2, cx + 140, row_y + 18, true);
+            draw_set_color(c_black);
+            draw_text(cx, row_y, txt);
+            draw_set_color(c_white);
+        } else {
+            draw_text(cx, row_y, txt);
         }
     }
+
     row_y += row_height;
 }
 
-// Draw Instructions
-draw_set_color(c_white);
+// ---------- Footer hint ----------
 draw_set_halign(fa_center);
-draw_text(display_get_gui_width()/2, display_get_gui_height() - 40, "D-Pad/Stick: Move  | A: Edit/Drag  | Start: Save  | B: Backspace");
+draw_set_color(c_white);
+draw_text(GW * 0.5, GH - 28, keyboard_open
+    ? "Type on the virtual keyboard. OK=Enter/Start, Cancel=Esc/B."
+    : "↑/↓ rows, ←/→ cols, A/Enter edit, B/Esc exit");

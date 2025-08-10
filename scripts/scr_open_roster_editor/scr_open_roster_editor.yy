@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_open_roster_editor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_open_roster_editor",
+  "parent":{
+    "name":"script",
+    "path":"folders/Objects/Palette/roster/script.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

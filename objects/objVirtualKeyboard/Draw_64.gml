@@ -1,38 +1,68 @@
-/// objVirtualKeyboard – Draw
+/// @desc objVirtualKeyboard — Draw GUI
 
-// --- Dim small rectangle behind keyboard only ---
-var kb_w = 10*(key_width+4);
-var kb_h =  5*(key_height+4);
-var bg_x1 = keyboard_offset_x - 10;
-var bg_y1 = keyboard_offset_y - 10;
-var bg_x2 = keyboard_offset_x + kb_w + 10;
-var bg_y2 = keyboard_offset_y + kb_h + 10;
+var GW = display_get_gui_width();
+var GH = display_get_gui_height();
 
-draw_set_alpha(0.75);
+// Modal backdrop
+draw_set_alpha(0.85);
 draw_set_color(c_black);
-draw_rectangle(bg_x1,bg_y1,bg_x2,bg_y2,true); // filled
+draw_rectangle(0, 0, GW, GH, false);
 draw_set_alpha(1);
 
-// --- Draw keys ---
-draw_set_font(font1_1);      // use your smaller font
-for (var row=0; row<5; row++) {
-    for (var col=0; col<10; col++) {
-        var idx = row*10 + col;
-        var ch  = keyboard_grid[idx];
-        var xx  = keyboard_offset_x + col*(key_width+4);
-        var yy  = keyboard_offset_y + row*(key_height+4);
+// Panel
+var panel_w = 560;
+var panel_h = 300;
+var panel_x = (GW - panel_w) * 0.5;
+var panel_y = (GH - panel_h) * 0.5;
 
-        if (row==selected_row && col==selected_col) {
+draw_set_color(c_white);
+draw_rectangle(panel_x, panel_y, panel_x + panel_w, panel_y + panel_h, true);
+draw_set_color(c_black);
+draw_rectangle(panel_x, panel_y, panel_x + panel_w, panel_y + panel_h, false);
+
+// Prompt
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text(panel_x + 16, panel_y + 12, string(prompt));
+
+// Current text (with blinking caret)
+var caret_on = (floor(current_time / 300) mod 2) == 0;
+var shown = input_text + (caret_on ? "|" : "");
+draw_text(panel_x + 16, panel_y + 44, shown);
+
+// On‑screen keyboard grid
+var gx = panel_x + 16;
+var gy = panel_y + 90;
+
+for (var r = 0; r < grid_rows; r++) {
+    for (var c = 0; c < grid_cols; c++) {
+        var idx = r * grid_cols + c;
+        if (idx >= array_length(keys)) continue;
+
+        var kx = gx + c * (cell_w + 8);
+        var ky = gy + r * (cell_h + 8);
+
+        // Highlight
+        if (r == cursor_row && c == cursor_col) {
             draw_set_color(c_yellow);
-            draw_rectangle(xx-2,yy-2,xx+key_width+2,yy+key_height+2,false);
+            draw_rectangle(kx - 2, ky - 2, kx + cell_w + 2, ky + cell_h + 2, true);
+            draw_set_color(c_black);
+            draw_text(kx + 8, ky + 8, string(keys[idx]));
+            draw_set_color(c_black);
+            draw_rectangle(kx - 2, ky - 2, kx + cell_w + 2, ky + cell_h + 2, false);
+        } else {
+            draw_set_color(make_color_rgb(230,230,230));
+            draw_rectangle(kx, ky, kx + cell_w, ky + cell_h, true);
+            draw_set_color(c_black);
+            draw_rectangle(kx, ky, kx + cell_w, ky + cell_h, false);
+            draw_text(kx + 8, ky + 8, string(keys[idx]));
         }
-        draw_set_color(c_white);
-        draw_text(xx + key_width div 2 - string_width(ch) div 2,
-                  yy + key_height div 2 - string_height(ch) div 2,
-                  ch);
     }
 }
 
-// --- Show current string directly above keyboard ---
-draw_set_color(c_white);
-draw_text(keyboard_offset_x, keyboard_offset_y - 36, current_string);
+// Footer
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_set_color(c_black);
+draw_text(panel_x + panel_w * 0.5, panel_y + panel_h - 26,
+          "OK = Enter/Start • Backspace = ← key or Backspace • Cancel = Esc/B");

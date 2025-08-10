@@ -1,41 +1,23 @@
-/// objRosterEditorSaveButton – Mouse Left Pressed Event
+/// objRosterEditorSaveButton – Mouse Left Pressed
 
-if (audio_exists(sndPressed)) audio_play_sound(sndPressed, 0, false);
-
-// Ensure global.team_info exists
-if (!variable_global_exists("team_info")) {
-    global.team_info = ds_map_create();
+// Play select sound (if you use it for button clicks)
+if (sound_exists(sndPressed)) {
+    audio_play_sound(sndPressed, 1, false);
 }
 
-// Determine current team being edited
-var teamname = (variable_global_exists("team_to_edit")) ? global.team_to_edit : "TEMPLATE";
+// Commit TEMPLATE edits before saving
+scr_commit_roster_edits_to_template();
 
-// Save Team Info Fields
-var info_arr = [global.team_name, global.team_city, global.team_abbr, global.logo_frame];
-global.team_info[? teamname] = info_arr;
+// Now run your existing save logic
+scr_save_team_data();
 
-// Save Roster Data back to global.teams
-if (variable_global_exists("teams") && ds_map_exists(global.teams, teamname)) {
-    var team_struct = global.teams[? teamname];
-    if (is_struct(team_struct)) {
-        team_struct.roster = array_create(array_length(global.roster_editor_data), 0);
-        array_copy(team_struct.roster, 0, global.roster_editor_data, 0, array_length(global.roster_editor_data));
+// Show confirmation
+if (instance_exists(objSaveConfirmation)) {
+    with (objSaveConfirmation) {
+        visible = true;
+        alarm[0] = room_speed * 2; // Fade out after 2 seconds
     }
+} else {
+    var conf = instance_create_layer(x, y, "GUI", objSaveConfirmation);
+    conf.alarm[0] = room_speed * 2;
 }
-
-// Save Palette back to team_palettes
-if (variable_global_exists("team_palettes") && ds_map_exists(global.team_palettes, teamname)) {
-    var pal_copy = array_create(array_length(global.current_pal), 0);
-    array_copy(pal_copy, 0, global.current_pal, 0, array_length(global.current_pal));
-    global.team_palettes[? teamname] = pal_copy;
-}
-
-// OPTIONAL: Save to file (e.g., scr_team_save(team_struct));
-
-// Show Save Confirmation Popup
-instance_create_layer(0, 0, "GUI", objSaveConfirmation);
-
-// Close the Editor Overlay
-global.roster_editor_active = false;
-if (instance_exists(objModalDimmer)) with (objModalDimmer) instance_destroy();
-with (objTeamRosterEditor) instance_destroy();
