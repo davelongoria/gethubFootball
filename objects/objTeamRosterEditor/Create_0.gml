@@ -58,3 +58,9 @@ global.roster_editor_active = true;
 // ---------- Column labels ----------
 col_labels = ["NAME","POS","SPD","AGI","TCK","DUR"];
 show_debug_message("Editor grid rows = " + string(array_length(grid_data)));
+// Boot-time font fallback (optional but robust)
+if (!variable_global_exists("__ui_font") || !is_real(global.__ui_font)) {
+    var tmp = font_add("Arial", 22, false, false, 32, 127);
+    if (tmp == -1) tmp = font_add("Tahoma", 22, false, false, 32, 127);
+    global.__ui_font = (tmp != -1) ? tmp : -1;
+}
